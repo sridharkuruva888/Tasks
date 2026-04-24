@@ -1,0 +1,163 @@
+body {
+
+font-family: Arial, sans-serif;
+background:#f5f7fa;
+margin:0;
+padding:0;
+
+}
+
+
+.container {
+
+width:90%;
+margin:auto;
+
+}
+
+.intro {
+
+margin:20px 0;
+color:#555;
+
+}
+
+.section {
+
+margin-bottom:25px;
+
+}
+
+.section h2 {
+
+background:#e6f0ff;
+padding:10px;
+color:#2b5fad;
+border-radius:4px;
+
+}
+
+.card {
+
+background:white;
+padding:20px;
+border:1px solid #ddd;
+border-radius:6px;
+margin-top:10px;
+
+}
+
+/* Form */
+
+.form-grid {
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+
+}
+
+.form-grid label {
+
+display:block;
+margin-top:10px;
+
+}
+
+.form-grid input,
+.form-grid select {
+
+width:100%;
+padding:6px;
+margin-top:5px;
+
+}
+
+.check-row {
+
+margin-top:15px;
+
+}
+
+.form-buttons {
+
+margin-top:15px;
+
+}
+
+.form-buttons button {
+
+padding:8px 14px;
+margin-right:10px;
+
+}
+
+/* Colors box */
+
+.box {
+
+margin-top:15px;
+padding:12px;
+border:2px solid blue;
+background:#eef3ff;
+
+}
+
+/* Table */
+
+table {
+
+width:100%;
+border-collapse:collapse;
+margin-top:10px;
+
+}
+
+th, td {
+
+border:1px solid #ccc;
+padding:10px;
+text-align:left;
+
+}
+
+.center {
+
+text-align:center;
+
+}
+
+.right {
+
+text-align:right;
+
+}
+
+/* Layout section */
+
+.generic {
+
+background:#f9f9f9;
+padding:10px;
+border:1px solid #ddd;
+margin-bottom:10px;
+
+}
+
+#unique {
+
+background:#eef3ff;
+padding:10px;
+border:1px solid #a5bdfc;
+
+}
+
+/* Footer */
+
+footer {
+
+text-align:center;
+margin:40px 0;
+color:#777;
+
+}

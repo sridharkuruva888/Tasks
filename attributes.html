@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML attributes</title>
+    <link rel="stylesheet" href="attributes.css" />
+  </head>
+
+  <body>
+    <div class="container">
+        <h1 style="color: blue;">HTML Elements, Attributes & Visuals</h1>
+      <p class="intro">
+        A comprehensive guide to properties that control behavior and
+        appearance.
+      </p>
+
+      <!-- Section 1 -->
+      <div class="section">
+        <h2>1. Common Attributes (href, src, alt, title)</h2>
+
+        <div class="card">
+          <h3>Links with target & mailto:</h3>
+
+          <a href="https://www.google.com" target="_blank">
+            Google (New Tab)
+          </a>
+          |
+          <a href="mailto:test@example.com"> Send Email </a>
+
+          <h3>Images & Abbreviations:</h3>
+
+          <img
+            src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ_Zuz3haRHrSz0f3bnMlUTGa14Qc7Z5LLQ3-l04P98hv9CMXQU"
+            alt="Dog Image"
+            width="200"
+          />
+
+          <p>
+            Hover over this:
+            <abbr title="Hyper Text Markup Language"> HTML </abbr>
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="section">
+        <h2>2. Event Attributes (JavaScript Interaction)</h2>
+
+        <div class="card">
+          <button onclick="showAlert()">Click Me (Alert)</button>
+
+          <p
+            class="hoverText"
+            onmouseover="changeColor(this)"
+            onmouseout="resetColor(this)"
+          >
+            Hover over me to change color
+          </p>
+
+          <p ondblclick="doubleClickText(this)">Double click this text</p>
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="section">
+        <h2>3. Input Types & Form Attributes</h2>
+
+        <div class="card form-grid">
+          <div>
+            <label>Text (Required):</label>
+            <input type="text" placeholder="Enter Your name" required />
+
+            <label>Email:</label>
+            <input type="email" placeholder="Email" />
+
+            <label>Date Picker:</label>
+            <input type="date" />
+
+            <label>Color Picker:</label>
+            <input type="color" />
+
+            <label>Selection:</label>
+            <select>
+              <option>One choice</option>
+              <option>Two choice</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Password:</label>
+            <input type="password" placeholder="Hidden chars" />
+
+            <label>Number:</label>
+            <input type="number" />
+
+            <label>Range Slider:</label>
+            <input type="range" />
+
+            <label>File Upload:</label>
+            <input type="file" />
+
+            <div class="check-row">
+              <label> <input type="checkbox" /> Checkbox </label>
+
+              <label> <input type="radio" name="r" /> Radio </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit">Submit Form</button>
+          <button type="reset">Clear All</button>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="section">
+        <h2>4. Visuals, Media & Colors</h2>
+
+        <div class="card">
+          <p style="color: red">Named: Red text</p>
+
+          <p style="color: #ff5733">HEX: Orange-Red (#ff5733)</p>
+
+          <p style="color: rgb(255, 165, 0)">RGB: Orange (255,165,0)</p>
+
+          <p style="color: rgba(255, 0, 0, 0.5)">RGBA: 50% transparent Red</p>
+
+          <p style="color: hsl(120, 100%, 40%)">HSL: Green (Hue 120)</p>
+
+          <div class="box">Applied: Background & Border Attributes</div>
+
+          <h3>Audio Control:</h3>
+
+          <audio controls>
+            <source src="" />
+            Your browser does not support audio.
+          </audio>
+        </div>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="section">
+        <h2>5. Advanced Table Layout (rowspan & colspan)</h2>
+
+        <div class="card">
+          <h3 class="center">Student Report Card</h3>
+
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Subject</th>
+              <th>Marks</th>
+            </tr>
+
+            <tr>
+              <td rowspan="2">Alice</td>
+              <td>Math</td>
+              <td>90</td>
+            </tr>
+
+            <tr>
+              <td>Science</td>
+              <td>85</td>
+            </tr>
+
+            <tr>
+              <td colspan="2" class="right">Total</td>
+              <td>175</td>
+            </tr>
+          </table>
+
+          <p class="center">End of Academic Report</p>
+        </div>
+      </div>
+
+      <!-- Section 6 -->
+      <div class="section">
+        <h2>6. Layout Containers (ID & Class)</h2>
+
+        <div class="card">
+          <div class="generic">This div uses a generic container layout.</div>
+
+          <p id="unique">This paragraph has a unique ID attribute.</p>
+        </div>
+      </div>
+
+      <footer>© 2023 Team-E Training - HTML Basics Guide</footer>
+    </div>
+
+    <!-- JavaScript -->
+
+    <script>
+      function showAlert() {
+        alert("Button Clicked!");
+      }
+
+      function changeColor(el) {
+        el.style.color = "blue";
+      }
+
+      function resetColor(el) {
+        el.style.color = "black";
+      }
+
+      function doubleClickText(el) {
+        el.innerHTML = "Text Double Clicked!";
+      }
+    </script>
+  </body>
+</html>
