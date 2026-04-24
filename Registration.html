@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+     <section style="border: 1px solid black;width: 350px;padding: 10px;margin: 20px auto;background-color: aqua;">
+            <h2 style="text-align: center;">Student Registration Form</h2>
+
+            <form style="text-align: center;">
+                <label>Full Name:</label><br>
+                <input type="text"  name="name"><br><br>
+
+                <label>Email:</label><br>
+                <input type="email"  name="email"><br><br>
+
+                <label>Phone Number:</label><br>
+                <input type="tel" name="phone"><br><br>
+
+                <label>Gender:</label><br>
+                <input type="radio"  name="gender" value="Male">
+                <label>Male</label>
+
+                <input type="radio"  name="gender" value="Female">
+                <label>Female</label><br><br>
+
+                <label>Select Course:</label><br>
+                <select  name="course">
+                    <option>course</option>
+                    <option>Full stack</option>
+                    <option>Testing</option>
+                    <option>web development</option>
+                    <option>my sql</option>
+                </select><br><br>
+
+                <label>Why do you want to register?</label><br>
+                <textarea  name="message" rows="5" cols="30" style="border-radius: 10px;"></textarea><br><br>
+
+                <!-- <input type="submit" value="Register"> -->
+                <button onclick="alert('registration done')">Register</button>
+                <input type="reset" value="Clear">
+            </form>
+        </section>
+    
+
+</body>
+</html>
