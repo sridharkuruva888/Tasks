@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.7;
+}
+
+.page {
+  padding: 30px 15px;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 28px;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+}
+
+.page-title {
+  font-size: 2rem;
+  color: #1e73be;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.card {
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  padding: 24px;
+  margin-bottom: 24px;
+  background: #fff;
+}
+
+.card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.card p {
+  margin-bottom: 16px;
+  color: #444;
+}
+
+.custom-link {
+  color: #2b7bbb;
+  cursor: pointer;
+}
+
+mark {
+  background: #f3e46d;
+  padding: 2px 4px;
+}
+
+code,
+kbd,
+samp {
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: Consolas, monospace;
+  font-size: 0.95rem;
+}
+
+.banner {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 12px 0 16px;
+  display: block;
+}
+
+.time-text {
+  color: #555;
+  font-size: 0.98rem;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  background: #fff;
+}
+
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #2f80ed;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #2f80ed;
+}
+
+output {
+  display: inline-block;
+  font-size: 1rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+progress,
+meter {
+  width: 100%;
+  height: 18px;
+}
+
+progress::-webkit-progress-bar {
+  background: #e6e6e6;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background: #2f80ed;
+  border-radius: 10px;
+}
+
+meter::-webkit-meter-bar {
+  background: #e6e6e6;
+  border-radius: 10px;
+}
+
+meter::-webkit-meter-optimum-value {
+  background: #5f7f1b;
+  border-radius: 10px;
+}
+
+.submit-btn {
+  background: #2f80ed;
+  color: #fff;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #1f6fd1;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inline Semantic Lab</title>
+  <link rel="stylesheet" href="inline.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="container">
+      <h1 class="page-title">Inline Semantic Lab</h1>
+
+      <div class="card">
+        <h2>Text & Typography</h2>
+
+        <p>
+          Welcome to the <b>bold</b> and <i>italic</i> world of HTML.
+          We use <strong>Strong</strong> for importance and
+          <em>Emphasis</em> for stress.
+        </p>
+
+        <p>
+          Sometimes we need to <u>underline</u> or <s>strike through</s> text.
+          You can also find small print, <mark>highlighted notes</mark>, and
+          even <sub>subscript</sub> or <sup>superscript</sup> formulas like
+          H<sub>2</sub>O or E=mc<sup>2</sup>.
+        </p>
+
+        <p>
+          Check out this HTML definition:
+          <q>Semantic HTML is the use of markup to reinforce meaning.</q>
+          <cite> As Tim Berners-Lee once implied, the web is for everyone.</cite>
+          The browser says: <code>"Hello World"</code>.
+          <span class="custom-link">This is a generic span for custom styling.</span>
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Technical Documentation</h2>
+
+        <p>
+          To save your work, press <kbd>Ctrl</kbd> + <kbd>S</kbd>.
+          The variable <code>x</code> is defined in our <code>main.js</code> file.
+          The terminal will output: <samp>Success: 200 OK.</samp>
+        </p>
+
+        <p>
+          Bidirectional override (RTL):
+          <bdo dir="rtl">This text will go right to left</bdo>
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Media & Links</h2>
+
+        <p>
+          Visit our
+          <a href="#" target="_blank" rel="noopener noreferrer">Documentation Portal</a>.
+        </p>
+
+        <img
+          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+          alt="Wide banner landscape"
+          class="banner"
+        />
+
+        <p class="time-text">Current Time: October 24, 2023</p>
+      </div>
+
+      <div class="card">
+        <h2>Interactive Elements</h2>
+
+        <div class="form-group">
+          <label for="entryA">Entry A (Input):</label>
+          <input type="number" id="entryA" value="10" />
+        </div>
+
+        <div class="form-group">
+          <label for="entryB">Entry B (Range):</label>
+          <input type="range" id="entryB" min="0" max="100" value="50" />
+        </div>
+
+        <div class="form-group">
+          <label>Sum (Output):</label>
+          <output>60</output>
+        </div>
+
+        <div class="form-group">
+          <label for="option">Select Option:</label>
+          <select id="option">
+            <option>Standard</option>
+            <option>Premium</option>
+            <option>Custom</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message (Textarea):</label>
+          <textarea id="message" rows="5" placeholder="Type here..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Upload Progress:</label>
+          <progress value="75" max="100"></progress>
+        </div>
+
+        <div class="form-group">
+          <label>Storage Capacity (Meter):</label>
+          <meter value="60" min="0" max="100"></meter>
+        </div>
+
+        <button class="submit-btn">Submit Button</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
