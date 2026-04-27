@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+}
+
+/* Header */
+
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+
+    background: linear-gradient(
+        to right,
+        #2c3e50,
+        #3498db,
+        #1abc9c
+    );
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 14px;
+}
+
+/* Container */
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+/* Cards */
+
+.card {
+    background: white;
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+.small {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* Color Buttons */
+
+.color-buttons button {
+    border: none;
+    padding: 12px 18px;
+    margin-right: 10px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.hex {
+    background: #e74c3c;
+}
+
+.rgb {
+    background: rgb(46,204,113);
+}
+
+.hsl {
+    background: hsl(200,100%,50%);
+}
+
+.rgba {
+    background: rgba(0,0,0,0.7);
+}
+
+/* Gradient */
+
+.gradient-box {
+    margin-top: 15px;
+    height: 120px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-weight: bold;
+
+    background: linear-gradient(
+        45deg,
+        #ff6b6b,
+        #feca57
+    );
+}
+
+/* Borders */
+
+.border-demo {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.box {
+    padding: 12px;
+    background: #f2f2f2;
+}
+
+.dashed {
+    border: 2px dashed #3498db;
+}
+
+.dotted {
+    border: 2px dotted #3498db;
+}
+
+.double {
+    border: 4px double #3498db;
+}
+
+.rounded {
+    border: 2px solid #3498db;
+    border-radius: 10px;
+}
+
+.pill {
+    width: 100px;
+    height: 60px;
+    display: flex;
+
+    background: #3498db;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+.innerdot{
+    width: 8px;
+    height: 8px;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Shadow Hover */
+
+.shadow-box {
+    padding: 20px;
+    background: #fafafa;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.shadow-box:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.2);
+}
+
+.primary-btn {
+    margin-top: 10px;
+
+    padding: 10px 18px;
+    border: none;
+
+    border-radius: 6px;
+
+    background: linear-gradient(
+        to right,
+        #667eea,
+        #764ba2
+    );
+
+    color: white;
+    cursor: pointer;
+}
+
+/* Typography */
+
+.dropcap::first-letter {
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    float: left;
+
+    margin-right: 6px;
+
+    color: #3498db;
+}
+
+.smallcaps {
+    margin-top: 10px;
+
+    font-variant: small-caps;
+
+    letter-spacing: 2px;
+}
+
+/* Ellipsis */
+
+.ellipsis {
+
+    margin-top: 10px;
+
+    width: 250px;
+
+    border: 1px solid #ccc;
+
+    padding: 5px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+/* Lists */
+
+.square-list {
+
+    list-style-type: square;
+
+    margin-bottom: 15px;
+
+    margin-left: 20px;
+}
+
+/* Table */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+th, td {
+
+    border: 1px solid #ddd;
+
+    padding: 10px;
+
+    text-align: left;
+}
+
+tr:nth-child(even) {
+
+    background: #f9f9f9;
+}
+
+/* Scroll */
+
+.scroll-box {
+
+    height: 100px;
+
+    border: 1px solid #ccc;
+
+    padding: 10px;
+
+    overflow: auto;
+}
