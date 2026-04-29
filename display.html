@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+    <style>
+      .container1 {
+        display: block;
+        text-align: center;
+      }
+      .container2 {
+        display: flex;
+        gap: 300px;
+        text-align: center;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        max-width: 700px;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div class="box1">
+      <h1>Image Display Arrangement</h1>
+      <h4>Images as block(display:block)</h4>
+      <p>Each image takes its own line and stacks vertically</p>
+      <div class="container1">
+        <div class="block" style="margin-bottom: 10px">box1</div>
+
+        <div class="block">box2</div>
+      </div>
+    </div>
+    <hr>
+    <div class="box2">
+      <h4>images in flexbox(display:flex)</h4>
+      <p>images sit in a row and are spaced evevntly</p>
+      <div class="container2">
+        <div class="flex">box1</div>
+        <div class="flex">box2</div>
+        <div class="flex">box3</div>
+      </div>
+    </div>
+    <hr>
+    <div class="box3">
+      <h4>images in grid(display:grid)</h4>
+      <p>organized into a 3-column structure</p>
+      <div class="grid-container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+        <div class="box">Box 6</div>
+      </div>
+    </div>
+  </body>
+</html>

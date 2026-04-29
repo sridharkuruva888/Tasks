@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      .section {
+        padding: 60px 40px;
+        background: #ffffff;
+      }
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        text-align: center;
+      }
+
+      .card {
+        width:250px;
+        padding:20px;
+        background: white;
+        transition: 0.3s ease;
+      }
+
+      .card:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px;
+      }
+
+      .circle {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        margin: auto;
+        overflow: hidden;
+      }
+
+      .bg1 {
+        background: #f3e6d6;
+      }
+      .bg2 {
+        background: #e8e8f7;
+      }
+      .bg3 {
+        background: #f2d5c0;
+      }
+      .bg4 {
+        background: #dfe3f3;
+      }
+
+      .circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .card h3 {
+        margin-top: 20px;
+        font-size: 20px;
+        color: #2c2c54;
+      }
+
+      .card p {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #777;
+        line-height: 1.6;
+      }
+
+      .date {
+        margin-top: 20px;
+        font-size: 13px;
+        color: #aaa;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="card-container">
+        <div class="card">
+          <div class="circle bg1">
+            <img
+              src="https://bridge512.qodeinteractive.com/wp-content/uploads/2018/06/blog-img-1-700x398.jpg"
+            />
+          </div>
+
+          <h3>Connection</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dia
+            nonu
+          </p>
+          <hr>
+
+          <div class="date">12 December, 2023</div>
+        </div>
+
+        <div class="card">
+          <div class="circle bg2">
+            <img
+              src="https://bridge512.qodeinteractive.com/wp-content/uploads/2018/06/blog-img-2-700x398.jpg"
+            />
+          </div>
+
+          <h3>Decoration</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dia
+            nonu
+          </p>
+          <hr>
+
+          <div class="date">12 December, 2023</div>
+        </div>
+
+        <div class="card">
+          <div class="circle bg3">
+            <img
+              src="https://bridge512.qodeinteractive.com/wp-content/uploads/2018/06/blog-img-3-700x398.jpg"
+            />
+          </div>
+
+          <h3>Disconnect</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dia
+            nonu
+          </p>
+          <hr>
+
+          <div class="date">12 December, 2023</div>
+        </div>
+
+        <div class="card">
+          <div class="circle bg4">
+            <img
+              src="https://bridge512.qodeinteractive.com/wp-content/uploads/2018/06/blog-img-4-700x398.jpg"
+            />
+          </div>
+
+          <h3>Scientific</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dia
+            nonu
+          </p>
+          <hr>
+
+          <div class="date">12 December, 2023</div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
