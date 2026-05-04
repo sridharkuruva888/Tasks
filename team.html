@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+.hero {
+  height: 120vh;
+  background: url("https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/title-area-team.jpg")
+    center/cover no-repeat;
+  position: relative;
+}
+.leaf {
+  position: absolute;
+  bottom: -10px; /* slight overlap like demo */
+  left: 0;
+  width: 140px;
+  z-index: 3;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 70px;
+  font-weight: 400;
+  color: rgb(223, 219, 219);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.navbar {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  color: rgb(237, 235, 235);
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(235, 227, 227);
+  font-size: 14px;
+  letter-spacing: 2px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  transform: translateY(-4px);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: rgb(227, 222, 222);
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+}
+
+.social div {
+  width: 40px;
+  height: 40px;
+  background: rgba(7, 7, 7, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(241, 238, 238);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social div:hover {
+  transform: scale(1.1);
+}
+
+/****************************History Section ************************************/
+
+.history {
+  background: #e9dede;
+  padding: 100px 60px;
+}
+
+.history-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.history-text {
+  max-width: 500px;
+}
+
+.history-text h1 {
+  font-size: 60px;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.history-text em {
+  font-style: italic;
+}
+
+.history-text p {
+  margin: 30px 0;
+  color: #555;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.read-btn {
+  padding: 12px 30px;
+  border: 1px solid #333;
+  background: transparent;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.read-btn:hover {
+  background: #333;
+  color: white;
+}
+
+.history-img {
+  position: relative;
+}
+
+.history-img img {
+  width: 600px;
+  display: block;
+}
+
+.signature {
+  position: absolute;
+  bottom: 20px;
+  left: -20px;
+  width: 180px;
+  opacity: 0.9;
+}
+
+.history-section {
+  background: #f3ecec;
+  padding: 80px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  align-items: center; /* vertical center */
+  gap: 60px;
+}
+
+.image-box {
+  flex: 1;
+}
+
+.image-box img {
+  width: 100%;
+}
+
+.content-box {
+  flex: 1;
+}
+
+.content-box h1 {
+  font-size: 60px;
+  font-family: serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.content-box h1 span {
+  font-style: italic;
+}
+
+.content-box p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 15px 40px;
+  border: 1px solid #333;
+  background: transparent;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+/*****************************************FOOTER SECTION *******************************/
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 80px 20px;
+
+  background: url("https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/footer-img.jpg")
+    no-repeat center/cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(103, 97, 97, 0.7);
+}
+
+.footer-content {
+  position: relative;
+  color: #fff;
+}
+
+.logo {
+  font-size: 50px;
+  font-family: serif;
+  margin-bottom: 20px;
+}
+
+.footer-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social .icon {
+  width: 45px;
+  height: 45px;
+  background: rgba(158, 69, 128, 0.799);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1717;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.social .icon:hover {
+  background: #e8e3e6;
+  transform: scale(1.1);
+}
+    </style>
+</head>
+<body>
+    <header>
+      <div class="hero">
+        <img
+          src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/graphic-1.png"
+          class="leaf"
+        />
+        <div class="hero-text">
+          <h1>Our team</h1>
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="logo">bridge</div>
+
+        <div class="nav-links">
+          <a href="home.html">HOME</a>
+          <a href="team.html">TEAM</a>
+          <a href="about.html">ABOUT</a>
+          <a href="contact.html">CONTACT</a>
+        </div>
+
+        <div class="social">
+          <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
+          <div class="icon"><i class="fa-brands fa-twitter"></i></div>
+          <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ****************************History section  ************************************ -->
+    <section class="history">
+      <div class="history-container">
+        <div class="history-text">
+          <h1><em>History</em><br />of manufacturer</h1>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam quis nostrud exercitation
+          </p>
+
+          <button class="read-btn">READ ALL</button>
+        </div>
+
+        <div class="history-img">
+          <img
+            src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/team-1.png"
+            alt="team"
+          />
+
+          <img
+            class="signature"
+            src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/signature.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="history-section">
+      <div class="container">
+        <div class="image-box">
+          <img
+            src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/team-2.png"
+            alt=""
+          />
+        </div>
+
+        <div class="content-box">
+          <h1><span>History</span><br />of manufacturer</h1>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam quis nostrud exercitation.
+          </p>
+
+          <button class="btn">READ ALL</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ****************************footer section  ************************************ -->
+
+    <footer class="footer">
+      <div class="footer-content">
+        <h2 class="logo">bridge</h2>
+
+        <p class="copyright">
+          © Copyright Qode Interactive – All Rights Reserved <br />
+          Proudly Made For You.
+        </p>
+
+        <div class="social">
+          <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
+          <div class="icon"><i class="fa-brands fa-twitter"></i></div>
+          <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+    

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/*header*/
+.hero {
+  height: 120vh;
+  background: url("https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/title-area-team.jpg")
+    center/cover no-repeat;
+  position: relative;
+}
+.leaf {
+  position: absolute;
+  bottom: -10px; /* slight overlap like demo */
+  left: 0;
+  width: 140px;
+  z-index: 3;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 70px;
+  font-weight: 400;
+  color: rgb(223, 219, 219);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.navbar {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  color: rgb(237, 235, 235);
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(235, 227, 227);
+  font-size: 14px;
+  letter-spacing: 2px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  transform: translateY(-4px);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: rgb(227, 222, 222);
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(220, 230, 255, 0.9);
+  color: #4f5871;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+} 
+/* ARTISAN */
+.artisan {
+  display: flex;
+  padding: 80px;
+  align-items: center;
+  gap: 50px;
+}
+
+.artisan-left {
+  position: relative;
+}
+
+.artisan-left img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+
+.artisan-right h2 {
+ margin-left: 200px;
+  font-size: 40px;
+  font: color #303030;
+  font-style:sans-serif;
+}
+
+.artisan-right span {
+   
+  font-style: italic;
+}
+
+.artisan-right p {
+  margin: 20px 0;
+  color: gray;
+}
+
+.artisan-right button {
+  padding: 10px 25px;
+  border: 1px solid black;
+   margin-left: 200px;
+  background: transparent;
+  cursor: pointer;
+}
+button:hover{
+    color: black;
+}
+/* GALLERY */
+.kohli {
+  display: flex;
+  gap: 20px;
+  padding: 60px;
+}
+
+.card3 {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card3 img {
+  width: 100%;
+  transition: 0.5s;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.card3:hover .overlay {
+  opacity: 1;
+}
+
+
+.card3:hover img {
+  transform: scale(1.1);
+}
+
+/* Reviews */
+.reviews {
+  position: relative;
+  text-align: center;
+  padding: 120px 20px;
+  background: #faf7f5;
+  overflow: hidden;
+}
+
+.reviews-bg-text {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  font-size: 140px;
+  font-family: 'Cormorant Garamond', serif;
+  color: rgba(120, 70, 70, 0.06);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.reviews h2 {
+  position: relative;
+  font-size: 64px;
+  margin-bottom: 20px;
+  color: #1f1512;
+}
+
+.reviews p {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto 24px;
+  color: #555;
+  font-size: 18px;
+}
+
+.reviews h3 {
+  position: relative;
+  font-size: 38px;
+  margin-bottom: 24px;
+  color: #2a1b16;
+}
+
+.review-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.review-nav button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #999;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.review-nav button:hover {
+  background: #2a1b16;
+  color: #fff;
+  border-color: #2a1b16;
+}
+/* Footer */
+.footer {
+  position: relative;
+  padding: 70px 20px;
+  text-align: center;
+  background: url('https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/footer-img.jpg') center/cover no-repeat;
+  color: #fff;
+  margin-top: 80px;
+}
+
+.footer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 6, 6, 0.72);
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+
+.footer h2 {
+  font-size: 58px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin-bottom: 8px;
+}
+
+.social-icons {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  color: #222;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #b67a56;
+  color: #fff;
+}
+
+    </style>
+</head>
+<body>
+     <header>
+      <div class="hero">
+        <img
+          src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/graphic-1.png"
+          class="leaf"
+        />
+        <div class="hero-text">
+          <h1>About</h1>
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="logo">bridge</div>
+
+        <div class="nav-links">
+          <a href="home.html">HOME</a>
+          <a href="team.html">TEAM</a>
+          <a href="about.html">ABOUT</a>
+          <a href="contact.html">CONTACT</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </header>
+    <section class="artisan">
+      <div class="artisan-left">
+        <img
+          src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/h1-img-1.jpg"
+          alt=""
+        />
+      </div>
+
+      <div class="artisan-right">
+        <h2><span>Artisan</span> <br />chocolatier</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam quis nostrud exercitation
+        </p>
+        <button>READ ALL</button>
+      </div>
+    </section>
+    <!-- GALLERY -->
+    <section class="kohli">
+      <div class="card3">
+        <img
+          src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/banner-1.jpg"
+        />
+        <!-- <div class="overlay" >
+            <h3 >Love chocalate</h3>
+        </div> -->
+      </div>
+      <div class="card3">
+        <img src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/banner-2.jpg" />
+        <!-- <div class="overlay" >
+            <h3 >Workshop Registration</h3>
+        </div> -->
+      </div>
+      <div class="card3">
+        <img
+          src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/banner-3.jpg"
+        />
+        <!-- <div class="overlay" >
+            <h3 >Think chocalate</h3>
+        </div> -->
+      </div>
+    </section>
+      <!-- Reviews Section -->
+  <section class="reviews">
+    <div class="reviews-bg-text"><i>Happy clients</i></div>
+    <h2>Chocolate reviews</h2>
+    <p>
+
+ 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip
+    </p>
+    <h3>Medison Jon</h3>
+    <div class="review-nav">
+      <button>&lt;</button>
+      <button>&gt;</button>
+    </div>
+  </section>
+
+<footer class="footer">
+    <div class="footer-overlay"></div>
+    <div class="footer-content">
+      <h2>bridge</h2>
+      <p>© Copyright Qode Interactive — All Rights Reserved</p>
+      <p>Proudly Made For You.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+</body>
+</html>

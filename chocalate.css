@@ -1,0 +1,641 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/*header*/
+.frame {
+  width: min(1440px, 100%);
+  min-height: 100vh;
+  position: relative;
+  justify-content: center;
+  /* overflow: hidden; */
+  background-image:
+    linear-gradient(rgba(28, 18, 15, 0.08), rgba(28, 18, 15, 0.08)),
+    url('https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/slider-background.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.16), rgba(0,0,0,0.08) 25%, rgba(0,0,0,0.18));
+  pointer-events: none;
+}
+
+.topbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 44px;
+}
+
+.navbar {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  color: rgb(237, 235, 235);
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(235, 227, 227);
+  font-size: 14px;
+  letter-spacing: 2px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  transform: translateY(-4px);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: rgb(227, 222, 222);
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(220, 230, 255, 0.9);
+  color: #4f5871;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.hero {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  min-height: calc(100vh - 100px);
+  padding: 18px 44px 40px;
+}
+
+.scribble {
+  position: absolute;
+  inset: 58px auto auto 50%;
+  transform: translateX(-16%);
+  width: min(58vw, 890px);
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.18));
+}
+
+.graphic-1 {
+  position: absolute;
+  right: 168px;
+  top: 118px;
+  width: 72px;
+}
+
+.graphic-3 {
+  position: absolute;
+  left: -6px;
+  bottom: 142px;
+  width: 94px;
+}
+
+.graphic-4 {
+  position: absolute;
+  right: 294px;
+  top: 315px;
+  width: 82px;
+}
+
+
+/* ARTISAN */
+.artisan {
+  display: flex;
+  padding: 80px;
+  align-items: center;
+  gap: 50px;
+}
+
+.artisan-left {
+  position: relative;
+}
+
+.artisan-left img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+
+.artisan-right h2 {
+ margin-left: 200px;
+  font-size: 40px;
+  font: color #303030;
+  font-style:sans-serif;
+}
+
+.artisan-right span {
+   
+  font-style: italic;
+}
+
+.artisan-right p {
+  margin: 20px 0;
+  color: gray;
+}
+
+.artisan-right button {
+  padding: 10px 25px;
+  border: 1px solid black;
+   margin-left: 200px;
+  background: transparent;
+  cursor: pointer;
+}
+button:hover{
+    color: black;
+}
+
+/* GALLERY */
+.kohli {
+  display: flex;
+  gap: 20px;
+  padding: 60px;
+}
+
+.card3 {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card3 img {
+  width: 100%;
+  transition: 0.5s;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity:0;
+  transition: 0.4s ease;
+}
+
+.card3:hover .overlay {
+  opacity: 1;
+}
+
+
+.card3:hover img {
+  transform: scale(1.1);
+}
+
+/* PRODUCTS */
+.products {
+  display: flex;
+  justify-content: space-around;
+  padding: 150px;
+  text-align: center;
+}
+
+.product img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product p {
+  color: gray;
+  font-size: 14px;
+}
+/*video*/
+
+.hero1 {
+  position: relative;
+  min-height: 100vh;
+  background: url('https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/video-background.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 10, 10, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  color: #fff;
+}
+
+.subtitle {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.hero1 h1 {
+  font-size: 64px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.hero-text {
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #2a1b16;
+}
+
+.play-button {
+  position: absolute;
+  z-index: 2;
+  width: 110px;
+  height: 110px;
+  border: 2px solid rgba(255,255,255,0.8);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 34px;
+  backdrop-filter: blur(2px);
+}
+
+/* Gallery Title */
+.gallery-title {
+  text-align: center;
+  padding: 100px 20px 40px;
+  background: #fff;
+}
+
+.gallery-title h2 {
+  font-size: 72px;
+  color: #2d1a14;
+  margin-bottom: 12px;
+}
+
+.gallery-title p {
+  max-width: 700px;
+  margin: auto;
+  color: #666;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  padding: 40px 6%;
+  background: #fff;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  height: 420px;
+  transition: transform 0.5s ease;
+}
+
+/* .gallery-item.tall img {
+  height: 560px;
+} */
+
+.gallery-item:hover img {
+  color: #666;
+  transform: scale(1.06);
+}
+
+/* Reviews */
+.reviews {
+  position: relative;
+  text-align: center;
+  padding: 120px 20px;
+  background: #faf7f5;
+  overflow: hidden;
+}
+
+.reviews-bg-text {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  font-size: 140px;
+  font-family: 'Cormorant Garamond', serif;
+  color: rgba(120, 70, 70, 0.06);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.reviews h2 {
+  position: relative;
+  font-size: 64px;
+  margin-bottom: 20px;
+  color: #1f1512;
+}
+
+.reviews p {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto 24px;
+  color: #555;
+  font-size: 18px;
+}
+
+.reviews h3 {
+  position: relative;
+  font-size: 38px;
+  margin-bottom: 24px;
+  color: #2a1b16;
+}
+
+.review-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.review-nav button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #999;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.review-nav button:hover {
+  background: #2a1b16;
+  color: #fff;
+  border-color: #2a1b16;
+}
+
+/* Visit / Contact */
+.visit-section {
+  background: #111;
+   background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.map-area iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+  filter: grayscale(100%) invert(92%) contrast(90%);
+}
+
+.contact-box {
+  width: 88%;
+  margin: -70px auto 0;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 16px 4px;
+  margin-bottom: 24px;
+  outline: none;
+  font-size: 15px;
+  background: transparent;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.btn-outline {
+  padding: 14px 32px;
+  border: 1px solid #444;
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #2a1b16;
+  color: #fff;
+  border-color: #2a1b16;
+}
+
+.contact-info {
+    width: 100%;
+    margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info h2 {
+    width: auto;
+  font-size: 56px;
+  margin-bottom: 20px;
+  color: #1d1410;
+}
+
+.contact-info p {
+    width: auto;
+  margin-bottom: 14px;
+  color: #555;
+}
+.sridhar{
+     width: 100%;
+  height: 420px;
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sridhar img{
+     width: 100%;
+  height: 420px;
+    background-size: auto;
+    justify-content: center;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  padding: 70px 20px;
+  text-align: center;
+  background: url('https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/footer-img.jpg') center/cover no-repeat;
+  color: #fff;
+  margin-top: 80px;
+}
+
+.footer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 6, 6, 0.72);
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+
+.footer h2 {
+  font-size: 58px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin-bottom: 8px;
+}
+
+.social-icons {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  color: #222;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #b67a56;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero h1,
+  .gallery-title h2,
+  .reviews h2,
+  .contact-info h2 {
+    font-size: 48px;
+  }
+
+  .contact-box {
+    grid-template-columns: 1fr;
+    padding: 40px 30px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1,
+  .gallery-title h2,
+  .reviews h2,
+  .contact-info h2 {
+    font-size: 36px;
+  }
+
+  .hero-text,
+  .reviews p {
+    font-size: 16px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item img,
+  .gallery-item.tall img {
+    height: 360px;
+  }
+
+  .contact-box {
+    width: 92%;
+    margin-top: -40px;
+  }
+
+  .reviews-bg-text {
+    font-size: 80px;
+  }
+
+  .play-button {
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+  }
+}
