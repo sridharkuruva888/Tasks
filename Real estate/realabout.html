@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real estate</title>
+     <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#111;
+}
+
+
+
+.hero1{
+    width:100%;
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.35),
+    rgba(208, 200, 200, 0.35)),
+    url("https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/about-title-image.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+    overflow:hidden;
+}
+
+
+
+.navbar{
+    width:100%;
+    padding:28px 70px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.logo h1{
+    color:#fff;
+    font-size:50px;
+    font-weight:700;
+    line-height:50px;
+}
+
+.logo span{
+    color:#fff;
+    letter-spacing:4px;
+    font-size:11px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:120px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-size:14px;
+    letter-spacing:2px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ff5b57;
+}
+
+.user-icon{
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+}
+
+
+
+.hero-content1{
+    width:100%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+
+.small-text{
+    color:#fff;
+    font-size:14px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.hero-content1 h1{
+    color:#fff;
+    font-size:85px;
+    font-weight:700;
+    margin-bottom:45px;
+}
+/* SECTION */
+.services-section{
+  width:100%;
+  background:#ffffff;
+  padding:120px 7%;
+}
+
+/* CONTAINER */
+.services-container{
+  display:flex;
+  justify-content:space-between;
+  gap:70px;
+  flex-wrap:wrap;
+}
+
+/* BOX */
+.service-box{
+  flex:1;
+  min-width:280px;
+}
+
+/* SMALL TITLE */
+.small-title{
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:3px;
+  color:#444;
+  margin-bottom:22px;
+}
+
+/* MAIN HEADING */
+.service-box h2{
+  font-size:34px;
+  line-height:1.3;
+  font-weight:700;
+  color:#111827;
+  margin-bottom:28px;
+}
+
+/* DESCRIPTION */
+.description{
+  font-size:18px;
+  line-height:1.9;
+  color:#777;
+  margin-bottom:40px;
+}
+
+/* BUTTON LINK */
+.read-more{
+  text-decoration:none;
+  color:#111827;
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:2px;
+  transition:0.3s;
+}
+
+.read-more span{
+  margin-left:10px;
+  font-size:18px;
+}
+
+.read-more:hover{
+  color:#000;
+  letter-spacing:3px;
+}
+
+  .hero {
+      display: flex;
+      /* background-color: white; */
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      width: 200%;
+      margin: 0 auto;
+      padding: 80px 48px;
+      gap: 60px;
+    }
+
+    /* ── Left column ── */
+    .hero__content {
+      flex: 1;
+      max-width: 520px;
+      
+    }
+
+    .hero__eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      color: white;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero__heading {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(42px, 5vw, 62px);
+      font-weight: 400;
+      color: white;
+      line-height: 1.08;
+      color: white;
+      margin-bottom: 28px;
+    }
+
+    .hero__body {
+      font-size: 15px;
+      line-height: 1.72;
+      color: var(--text-mid);
+      color: white;
+      margin-bottom: 40px;
+      max-width: 420px;
+    }
+
+    .hero__body strong {
+      font-weight: 700;
+      color: white;
+      color: var(--text-dark);
+    }
+
+    .hero__cta {
+      display: inline-block;
+      background-color: var(--red);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: white;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 36px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hero__cta:hover {
+      background-color: var(--red-dark);
+      transform: translateY(-1px);
+    }
+
+    /* ── Right column ── */
+    .hero__media {
+      flex: 1;
+      max-width: 580px;
+    }
+
+    .hero__image-wrap {
+      position: relative;
+      width: 100%;
+    }
+
+    
+
+    .hero__image {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      display: block;
+      background: linear-gradient(135deg, #d4a96a 0%, #b07b3c 40%, #7a5c2e 100%);
+      object-fit: cover;
+    }
+
+    
+    .hero__image-placeholder {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: linear-gradient(135deg, #e8c89a 0%, #c8956a 50%, #8a6040 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+
+    .hero__caption {
+      margin-top: 14px;
+      font-style: italic;
+      font-size: 13px;
+      color: white;
+    }
+
+   .banner{
+    width: 100%;
+    height: 800px;
+    background-image: url("https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/about-parallax.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+
+   .team-section{
+  width:100%;
+  padding:90px 70px;
+  background:#ffffff;
+}
+
+/* TOP CONTENT */
+
+.top-content{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:70px;
+  gap:30px;
+}
+
+.small-title{
+  display:block;
+  font-size:12px;
+  letter-spacing:3px;
+  color:#666;
+  margin-bottom:25px;
+  font-weight:600;
+}
+
+.left-text h1{
+  font-size:68px;
+  line-height:1.1;
+  font-weight:700;
+  max-width:850px;
+  margin-bottom:25px;
+}
+
+.left-text p{
+  font-size:24px;
+  color:#777;
+}
+
+.location-btn{
+  background:#e33a2f;
+  color:#fff;
+  text-decoration:none;
+  padding:20px 55px;
+  font-size:14px;
+  letter-spacing:2px;
+  font-weight:700;
+  margin-top:30px;
+  transition:0.3s;
+}
+
+.location-btn:hover{
+  background:#c52f25;
+}
+
+/* TEAM GRID */
+
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:45px 35px;
+}
+
+.team-card{
+  text-align:center;
+}
+
+.team-card img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  background:#f5f5f5;
+  transition:0.4s ease;
+}
+
+.team-card:hover img{
+  transform:translateY(-8px);
+}
+
+.team-card h3{
+  margin-top:25px;
+  font-size:18px;
+  font-weight:700;
+  color:#111;
+}
+
+.team-card span{
+  display:block;
+  margin-top:10px;
+  font-size:15px;
+  color:#666;
+  font-style:italic;
+}
+
+.testimonial-section{
+    position:relative;
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    /* Background */
+    background:
+    linear-gradient(rgba(0,0,0,0.75),
+    rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1520034475321-cbe63696469a?q=80&w=1920&auto=format&fit=crop')
+    center/cover no-repeat;
+}
+
+
+.testimonial-content{
+    position:relative;
+    z-index:2;
+
+    max-width:900px;
+    text-align:center;
+    padding:20px;
+    color:#fff;
+}
+
+
+.quote-icon{
+    font-size:60px;
+    color:#ff7aa8;
+    margin-bottom:20px;
+    font-family:'Great Vibes', cursive;
+}
+
+.testimonial-content h2{
+    font-size:40px;
+    line-height:1.5;
+    font-weight:500;
+    font-style:italic;
+    color:#f5f5f5;
+}
+
+
+.author{
+    margin-top:25px;
+    font-size:18px;
+    color:#ddd;
+    font-style:italic;
+}
+
+
+.dots{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+
+.dots span{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#fff;
+    opacity:0.5;
+}
+
+.dots span.active{
+    background:#ff4d6d;
+    opacity:1;
+}
+
+
+.tour-section{
+  text-align:center;
+  background-color: lightgray;
+  padding:80px 20px 100px;
+}
+
+.small-text{
+  font-size:11px;
+  letter-spacing:3px;
+  color:#777;
+  margin-bottom:20px;
+}
+
+.tour-section h1{
+  font-size:52px;
+  line-height:1.2;
+  font-weight:700;
+  color: black;
+  margin-bottom:25px;
+}
+
+
+
+
+.social-icons{
+  display:flex;
+  color: white;
+  justify-content:center;
+  gap:15px;
+}
+
+.social-icons a{
+  width:42px;
+  height:42px;
+  border:1px solid #999;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#333;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.social-icons a:hover{
+  background:#111;
+  color:#fff;
+}
+
+
+.logo-section{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  flex-wrap:wrap;
+  padding:70px 40px;
+  gap:40px;
+}
+
+.logo{
+  font-size:36px;
+  font-weight:600;
+  color:lightcyan;
+  opacity:0.9;
+}
+
+/* FOOTER */
+.footer{
+  background:#0d0d0d;
+  color:#fff;
+  padding:70px 60px 30px;
+}
+
+.footer-container{
+  display:flex;
+  justify-content:space-between;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+.footer-box{
+  flex:1;
+  min-width:250px;
+}
+
+.footer-box h2{
+  font-size:38px;
+  margin-bottom:20px;
+}
+
+.footer-box h4{
+  font-size:20px;
+  margin-bottom:20px;
+}
+
+.footer-box p{
+  color:#bdbdbd;
+  line-height:1.8;
+  font-size:15px;
+}
+
+
+.newsletter-form{
+  display:flex;
+  margin:20px 0;
+}
+
+.newsletter-form input{
+  flex:1;
+  padding:14px;
+  border:none;
+  outline:none;
+  background:#fff;
+}
+
+.newsletter-form button{
+  border:none;
+  padding:14px 24px;
+  background:#e63946;
+  color:#fff;
+  font-size:12px;
+  letter-spacing:1px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.newsletter-form button:hover{
+  background:#c62828;
+}
+
+.follow-text{
+  margin-top:10px;
+  margin-bottom:12px;
+}
+
+.footer-social{
+  display:flex;
+  gap:15px;
+}
+
+.footer-social a{
+  color:#fff;
+  font-size:15px;
+  transition:0.3s;
+}
+
+.footer-social a:hover{
+  color:#e63946;
+}
+
+
+.copyright{
+  text-align:center;
+  margin-top:60px;
+  color:#aaa;
+  font-size:14px;
+}
+    </style>
+</head>
+<body>
+     <!-- HEADER SECTION -->
+  <section class="hero1">
+
+    
+    <header class="navbar">
+      <div class="logo">
+        <h1>Bridge</h1>
+        <span>UNIQUE PLACES</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="Real estate.html">HOME</a></li>
+          <li><a href="realabout.html">ABOUT</a></li>
+          <li><a href="Pricing.html">PRICING</a></li>
+          <li><a href="Realcontact.html">CONTACT</a></li>
+          <li><a href="propertylist.html">PROPERTY LIST</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-icon">
+        <i class="fa-regular fa-user"></i>
+      </div>
+    </header>
+
+
+    <div class="hero-content1">
+
+      <p class="small-text">IT'S A LEASE, NOT A LEASH.</p>
+
+      <h1>About Our Agency</h1>
+
+      </div>
+
+    </div>
+  </section>
+   <section class="services-section">
+
+    <div class="services-container">
+
+      <!-- CARD 1 -->
+      <div class="service-box">
+        <p class="small-title">WHAT WE DO</p>
+
+        <h2>
+          Professional Serviced <br>
+          Apartments Supplier
+        </h2>
+
+        <p class="description">
+          Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna.
+        </p>
+
+        <a href="#" class="read-more">
+          FIND OUT MORE <span>→</span>
+        </a>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="service-box">
+        <p class="small-title">VISION AND VALUES</p>
+
+        <h2>
+          Great Service, personal <br>
+          Dedication and value
+        </h2>
+
+        <p class="description">
+          Dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua.
+        </p>
+
+        <a href="#" class="read-more">
+          FIND OUT MORE <span>→</span>
+        </a>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="service-box">
+        <p class="small-title">OUR STORY</p>
+
+        <h2>
+          We have always kept <br>
+          our eye on the needs
+        </h2>
+
+        <p class="description">
+          Consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Consectetur
+        </p>
+
+        <a href="#" class="read-more">
+          FIND OUT MORE <span>→</span>
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="hero">
+
+    <!-- Left: text -->
+    <div class="hero__content">
+      <p class="hero__eyebrow">Buy, Sell or Rent</p>
+      <h1 class="hero__heading">We help you find<br>your new place</h1>
+      <p class="hero__body">
+        <strong>Ipsum dolor sit</strong> amet, consectetur <strong>adipisicing elit</strong>, sed do
+        eiusmod tempor incididunt ut labore et dolore magna op aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut.
+      </p>
+      <a href="#contact" class="hero__cta">Contact Us</a>
+    </div>
+
+    <!-- Right: image -->
+    <div class="hero__media">
+      <div class="hero__image-wrap">
+        <div class="hero__image-placeholder" aria-label="Team collaborating in an office">
+          <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/about-image-1.jpg" alt="">
+        </div>
+      </div>
+      <p class="hero__caption">Tragaluz, Gracia, Barcelona</p>
+    </div>
+
+  </section>
+  <div class="banner"></div>
+
+  <section class="team-section">
+
+  <div class="top-content">
+    <div class="left-text">
+      <span class="small-title">PICK COUNTRY YOU WANT</span>
+
+      <h1>
+        We would be nowhere without <br>
+        our hardworking team
+      </h1>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      </p>
+    </div>
+
+    <a href="#" class="location-btn">LOCATIONS</a>
+  </div>
+
+  <div class="team-grid">
+
+    <div class="team-card">
+      <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/team-1.jpg" alt="">
+      <h3>Lau Karling</h3>
+      <span>Head of Office</span>
+    </div>
+
+    <div class="team-card">
+      <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/team-2.jpg" alt="">
+      <h3>Jane Doe</h3>
+      <span>PR Office</span>
+    </div>
+
+    <div class="team-card">
+      <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/team-3.jpg" alt="">
+      <h3>Ellison Smith</h3>
+      <span>Manager</span>
+    </div>
+
+    <div class="team-card">
+      <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/team-4.jpg" alt="">
+      <h3>Diana Jones</h3>
+      <span>Software Architect</span>
+    </div>
+
+    <div class="team-card">
+      <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/team-5.jpg" alt="">
+      <h3>Pella Meriweather</h3>
+      <span>Selling Agent</span>
+    </div>
+
+    <div class="team-card">
+      <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/team-6.jpg" alt="">
+      <h3>Eric Sierra</h3>
+      <span>CEO</span>
+    </div>
+
+    <div class="team-card">
+      <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/team-7.jpg" alt="">
+      <h3>Alexandra Devine</h3>
+      <span>Desk Manager</span>
+    </div>
+
+    <div class="team-card">
+      <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/team-8.jpg" alt="">
+      <h3>Valentin Goricheva</h3>
+      <span>Selling Agent</span>
+    </div>
+
+  </div>
+
+</section>
+
+<!--  SECTION 4-->
+<section class="testimonial-section">
+
+  <div class="overlay"></div>
+
+  <div class="testimonial-content">
+
+    <div class="quote-icon">
+        <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/home-testimoinals-graphic.png" alt="logo">
+    </div>
+
+    <h2>
+      "Ipsum dolor sit amet, consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore lorem."
+    </h2>
+
+    <p class="author">Ben Miller, Student</p>
+
+    <div class="dots">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+
+</section>
+
+<!--  SECTION 7-->
+    <section class="tour-section">
+    <p class="small-text">TAKE A 3D TOUR</p>
+
+    <h1>
+      Take a one-to-one tour to view <br />
+      a serviced apartment.
+    </h1>
+
+   
+
+    <!-- SOCIAL ICONS -->
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+
+
+  <!-- CLIENT LOGOS -->
+  <div class="logo-section">
+    <div class="logo"> <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/client-1a.png" alt=""></div>
+    <div class="logo"> <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/client-2a.png" alt=""></div>
+    <div class="logo"> <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/client-3.png" alt=""></div>
+    <div class="logo"> <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/client-4.png" alt=""></div>
+    <div class="logo"> <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/client-5.png" alt=""></div>
+    <div class="logo">
+        <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/client-6.png" alt="">
+    </div>
+  </div>
+    </section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- LEFT -->
+      <div class="footer-box">
+        <h2>Bridge</h2>
+        <p>
+          Lorem ipsum dolor sit amet, <br />
+          consectetur adipiscing.
+        </p>
+      </div>
+
+      <!-- CENTER -->
+      <div class="footer-box">
+        <h4>Contact</h4>
+        <p>774 NE 84th St Miami, FL 33879</p>
+        <p>Call us FREE +1(800) 990 8877</p>
+        <p>email@gmail.com</p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="footer-box newsletter">
+        <h4>Subscribe to Newsletter</h4>
+
+        <div class="newsletter-form">
+          <input type="email" placeholder="Get Newsletter..." />
+          <button>SUBMIT NOW</button>
+        </div>
+
+        <p class="follow-text">Don't forget to follow us on:</p>
+
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      Copyright © Qode Interactive 2020
+    </div>
+  </footer>
+</body>
+</html>

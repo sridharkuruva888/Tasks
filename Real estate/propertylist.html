@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property list</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:white;
+}
+.navbar{
+    width:100%;
+    padding:28px 70px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.logo h1{
+    color:black;
+    font-size:50px;
+    font-weight:700;
+    line-height:50px;
+}
+
+.logo span{
+    color:black;
+    letter-spacing:4px;
+    font-size:11px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:120px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:black;
+    font-size:14px;
+    letter-spacing:2px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ff5b57;
+}
+
+.user-icon{
+    color:black;
+    font-size:22px;
+    cursor:pointer;
+}
+
+
+.property-section{
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+}
+
+/* MAP AREA */
+
+.map-area{
+    width:48%;
+}
+
+.map-tabs{
+    display:flex;
+}
+
+.map-tabs button{
+    padding:14px 28px;
+    border:none;
+    background:#f3f3f3;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.map-tabs .active{
+    background:#fff;
+    border:1px solid #e5e5e5;
+}
+
+.map-box{
+    position:relative;
+    height:880px;
+    overflow:hidden;
+    border:1px solid #eee;
+}
+
+.map-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.location-pin{
+    position:absolute;
+    top:42%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:42px;
+    color:#ff4d4d;
+}
+
+.map-controls{
+    position:absolute;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.map-controls button{
+    width:45px;
+    height:45px;
+    border:none;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+    cursor:pointer;
+    font-size:18px;
+}
+
+
+
+.property-content{
+    width:52%;
+}
+
+
+
+.filter-box{
+    margin-bottom:50px;
+}
+
+.property-types{
+    display:flex;
+    gap:100px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+    color:#555;
+}
+
+.property-types span{
+    font-size:15px;
+}
+
+.property-types i{
+    margin-right:8px;
+}
+
+.price-range p{
+    margin-bottom:15px;
+    color:#444;
+}
+
+.price-range input{
+    width:100%;
+    accent-color:#ff4d4d;
+}
+
+.details-row{
+    display:flex;
+    gap:20px;
+    margin-top:30px;
+}
+
+.field{
+    width:50%;
+}
+
+.field label{
+    display:block;
+    margin-bottom:10px;
+    color:#555;
+}
+
+.field input{
+    width:100%;
+    height:48px;
+    border:1px solid #ddd;
+    padding-left:15px;
+    outline:none;
+}
+
+
+
+.amenities{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:35px;
+    color:#666;
+}
+
+.amenities label{
+    font-size:15px;
+}
+
+
+
+.filter-buttons{
+    display:flex;
+    gap:20px;
+    margin-top:40px;
+}
+
+.filter-btn{
+    background:#ff4d4d;
+    color:#fff;
+    border:none;
+    padding:16px 40px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.save-btn{
+    background:#444;
+    color:#fff;
+    border:none;
+    padding:16px 40px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+
+
+.property-cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+}
+
+.card-image{
+    overflow:hidden;
+}
+
+.card-image img{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+.card-content{
+    padding-top:20px;
+}
+
+.card-content h5{
+    font-size:18px;
+    color:#444;
+    margin-bottom:12px;
+}
+
+.card-content h2{
+    font-size:34px;
+    font-weight:500;
+    margin-bottom:10px;
+    color:#222;
+}
+
+.card-content p{
+    color:#777;
+    margin-bottom:20px;
+    font-style:italic;
+}
+
+.card-info{
+    display:flex;
+    gap:25px;
+    color:#666;
+}
+
+.card-info span{
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+/* FOOTER */
+.footer{
+    margin-top: 30px;
+  background:#0d0d0d;
+  color:#fff;
+  padding:70px 60px 30px;
+}
+
+.footer-container{
+  display:flex;
+  justify-content:space-between;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+.footer-box{
+  flex:1;
+  min-width:250px;
+}
+
+.footer-box h2{
+  font-size:38px;
+  margin-bottom:20px;
+}
+
+.footer-box h4{
+  font-size:20px;
+  margin-bottom:20px;
+}
+
+.footer-box p{
+  color:#bdbdbd;
+  line-height:1.8;
+  font-size:15px;
+}
+
+/* NEWSLETTER */
+.newsletter-form{
+  display:flex;
+  margin:20px 0;
+}
+
+.newsletter-form input{
+  flex:1;
+  padding:14px;
+  border:none;
+  outline:none;
+  background:#fff;
+}
+
+.newsletter-form button{
+  border:none;
+  padding:14px 24px;
+  background:#e63946;
+  color:#fff;
+  font-size:12px;
+  letter-spacing:1px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.newsletter-form button:hover{
+  background:#c62828;
+}
+
+.follow-text{
+  margin-top:10px;
+  margin-bottom:12px;
+}
+
+.footer-social{
+  display:flex;
+  gap:15px;
+}
+
+.footer-social a{
+  color:#fff;
+  font-size:15px;
+  transition:0.3s;
+}
+
+.footer-social a:hover{
+  color:#e63946;
+}
+
+/* COPYRIGHT */
+.copyright{
+  text-align:center;
+  margin-top:60px;
+  color:#aaa;
+  font-size:14px;
+}
+
+    </style>
+</head>
+<body>
+    
+     <!-- HEADER SECTION -->
+  <section class="hero1">
+
+    
+    <header class="navbar">
+      <div class="logo">
+        <h1>Bridge</h1>
+        <span>UNIQUE PLACES</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="Real estate.html">HOME</a></li>
+          <li><a href="realabout.html">ABOUT</a></li>
+          <li><a href="Pricing.html">PRICING</a></li>
+          <li><a href="Realcontact.html">CONTACT</a></li>
+          <li><a href="propertylist.html">PROPERTY LIST</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-icon">
+        <i class="fa-regular fa-user"></i>
+      </div>
+    </header>
+
+     <section class="property-section">
+
+
+    <div class="map-area">
+
+      <div class="map-tabs">
+        <button class="active">Map</button>
+        <button>Satellite</button>
+      </div>
+
+      <div class="map-box">
+
+        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200&auto=format&fit=crop"
+          alt="Map">
+
+        <div class="location-pin">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <div class="map-controls">
+          <button><i class="fa-solid fa-plus"></i></button>
+          <button><i class="fa-solid fa-minus"></i></button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="property-content">
+
+      
+      <div class="filter-box">
+
+        <div class="property-types">
+          <span><i class="fa-solid fa-building"></i> Apartment</span>
+          <span><i class="fa-solid fa-city"></i> Condominium</span>
+          <span><i class="fa-solid fa-house"></i> House</span>
+          <span><i class="fa-solid fa-shop"></i> Shop</span>
+        </div>
+
+        <div class="price-range">
+          <p>Price range: From $0 to $4125</p>
+
+          <input type="range" min="0" max="4125">
+        </div>
+
+        <div class="details-row">
+
+          <div class="field">
+            <label>Min Size</label>
+            <input type="text" placeholder="Min">
+          </div>
+
+          <div class="field">
+            <label>Max Size</label>
+            <input type="text" placeholder="Max">
+          </div>
+
+        </div>
+
+        <div class="amenities">
+
+          <label><input type="checkbox"> Air Conditioning</label>
+          <label><input type="checkbox"> Laundry</label>
+          <label><input type="checkbox"> Gym</label>
+          <label><input type="checkbox"> Refrigerator</label>
+          <label><input type="checkbox"> Swimming Pool</label>
+          <label><input type="checkbox"> TV Cable</label>
+
+        </div>
+
+        <div class="filter-buttons">
+          <button class="filter-btn">FILTER RESULTS</button>
+          <button class="save-btn">SAVE SEARCH</button>
+        </div>
+
+      </div>
+
+      
+      <div class="property-cards">
+
+    
+        <div class="card">
+
+          <div class="card-image">
+            <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/property-5.jpg"
+              alt="">
+          </div>
+
+          <div class="card-content">
+            <h5>$4.130</h5>
+            <h2>HZ33 Whiteheads Grove</h2>
+            <p>Istanbul – Turkey</p>
+
+            <div class="card-info">
+              <span><i class="fa-solid fa-bed"></i> 2</span>
+              <span><i class="fa-solid fa-bath"></i> 1</span>
+              <span><i class="fa-solid fa-expand"></i> 52m²</span>
+            </div>
+          </div>
+
+        </div>
+
+        
+        <div class="card">
+
+          <div class="card-image">
+            <img src="https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/property-4.jpg"
+              alt="">
+          </div>
+
+          <div class="card-content">
+            <h5>$4.130</h5>
+            <h2>HZ33 Whiteheads Grove</h2>
+            <p>Istanbul – Turkey</p>
+
+            <div class="card-info">
+              <span><i class="fa-solid fa-bed"></i> 2</span>
+              <span><i class="fa-solid fa-bath"></i> 1</span>
+              <span><i class="fa-solid fa-expand"></i> 52m²</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- LEFT -->
+      <div class="footer-box">
+        <h2>Bridge</h2>
+        <p>
+          Lorem ipsum dolor sit amet, <br />
+          consectetur adipiscing.
+        </p>
+      </div>
+
+      <!-- CENTER -->
+      <div class="footer-box">
+        <h4>Contact</h4>
+        <p>774 NE 84th St Miami, FL 33879</p>
+        <p>Call us FREE +1(800) 990 8877</p>
+        <p>email@gmail.com</p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="footer-box newsletter">
+        <h4>Subscribe to Newsletter</h4>
+
+        <div class="newsletter-form">
+          <input type="email" placeholder="Get Newsletter..." />
+          <button>SUBMIT NOW</button>
+        </div>
+
+        <p class="follow-text">Don't forget to follow us on:</p>
+
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      Copyright © Qode Interactive 2020
+    </div>
+  </footer>
+</body>
+</html>

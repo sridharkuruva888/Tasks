@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <style>
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#111;
+}
+
+
+
+.hero1{
+    width:100%;
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.35),
+    rgba(208, 200, 200, 0.35)),
+    url("https://bridge253.qodeinteractive.com/wp-content/uploads/2020/11/contact-title-image.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+    overflow:hidden;
+}
+
+
+
+.navbar{
+    width:100%;
+    padding:28px 70px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.logo h1{
+    color:#fff;
+    font-size:50px;
+    font-weight:700;
+    line-height:50px;
+}
+
+.logo span{
+    color:#fff;
+    letter-spacing:4px;
+    font-size:11px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:120px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-size:14px;
+    letter-spacing:2px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ff5b57;
+}
+
+.user-icon{
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.hero-content1{
+    width:100%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+
+.small-text{
+    color:#fff;
+    font-size:14px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.hero-content1 h1{
+    color:#fff;
+    font-size:85px;
+    font-weight:700;
+    margin-bottom:45px;
+}
+
+/* CONTACT SECTION */
+.contact-section{
+  width:100%;
+  background:#fff;
+  padding:90px 7%;
+}
+
+.container{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+/* LEFT SIDE */
+.contact-left{
+  flex:1;
+  min-width:320px;
+}
+
+.sub-title{
+  font-size:13px;
+  letter-spacing:2px;
+  color:#777;
+  margin-bottom:20px;
+  font-weight:600;
+}
+
+.contact-left h1{
+  font-size:64px;
+  line-height:1.1;
+  margin-bottom:30px;
+  font-weight:700;
+}
+
+.description{
+  font-size:20px;
+  line-height:1.9;
+  color:#777;
+  max-width:650px;
+  margin-bottom:40px;
+}
+
+.description strong{
+  color:#111;
+}
+
+.contact-info p{
+  margin-bottom:18px;
+  color:#555;
+  font-size:20px;
+}
+
+.contact-info i{
+  color:#111;
+  margin-right:12px;
+}
+
+/* SOCIAL */
+.social-section{
+  margin-top:55px;
+}
+
+.social-section p{
+  margin-bottom:25px;
+  color:#555;
+  font-size:20px;
+}
+
+.social-icons{
+  display:flex;
+  gap:18px;
+}
+
+.social-icons a{
+  width:50px;
+  height:50px;
+  border:1px solid #bbb;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:#111;
+  transition:0.3s;
+}
+
+.social-icons a:hover{
+  background:#111;
+  color:#fff;
+}
+
+/* RIGHT SIDE FORM */
+.contact-right{
+  flex:1;
+  min-width:320px;
+}
+
+.contact-right form{
+  width:100%;
+}
+
+.contact-right input,
+.contact-right textarea{
+  width:100%;
+  border:1px solid #bcbcbc;
+  padding:18px 20px;
+  margin-bottom:20px;
+  font-size:18px;
+  outline:none;
+  background:#fff;
+}
+
+.contact-right textarea{
+  height:260px;
+  resize:none;
+}
+
+/* BUTTON */
+.contact-right button{
+  background:#e53935;
+  color:#fff;
+  border:none;
+  padding:18px 55px;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.contact-right button:hover{
+  background:#c62828;
+}
+
+/* MAP SECTION */
+.map-section{
+  width:100%;
+  height:550px;
+  overflow:hidden;
+}
+
+.map-section iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  filter:grayscale(100%);
+}
+/* FOOTER */
+.footer{
+  background:#0d0d0d;
+  color:#fff;
+  padding:70px 60px 30px;
+}
+
+.footer-container{
+  display:flex;
+  justify-content:space-between;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+.footer-box{
+  flex:1;
+  min-width:250px;
+}
+
+.footer-box h2{
+  font-size:38px;
+  margin-bottom:20px;
+}
+
+.footer-box h4{
+  font-size:20px;
+  margin-bottom:20px;
+}
+
+.footer-box p{
+  color:#bdbdbd;
+  line-height:1.8;
+  font-size:15px;
+}
+
+/* NEWSLETTER */
+.newsletter-form{
+  display:flex;
+  margin:20px 0;
+}
+
+.newsletter-form input{
+  flex:1;
+  padding:14px;
+  border:none;
+  outline:none;
+  background:#fff;
+}
+
+.newsletter-form button{
+  border:none;
+  padding:14px 24px;
+  background:#e63946;
+  color:#fff;
+  font-size:12px;
+  letter-spacing:1px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.newsletter-form button:hover{
+  background:#c62828;
+}
+
+.follow-text{
+  margin-top:10px;
+  margin-bottom:12px;
+}
+
+.footer-social{
+  display:flex;
+  gap:15px;
+}
+
+.footer-social a{
+  color:#fff;
+  font-size:15px;
+  transition:0.3s;
+}
+
+.footer-social a:hover{
+  color:#e63946;
+}
+
+/* COPYRIGHT */
+.copyright{
+  text-align:center;
+  margin-top:60px;
+  color:#aaa;
+  font-size:14px;
+}
+
+    </style>
+</head>
+
+<body>
+     <!-- HEADER SECTION -->
+  <section class="hero1">
+
+    
+    <header class="navbar">
+      <div class="logo">
+        <h1>Bridge</h1>
+        <span>UNIQUE PLACES</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="Real estate.html">HOME</a></li>
+          <li><a href="realabout.html">ABOUT</a></li>
+          <li><a href="Pricing.html">PRICING</a></li>
+          <li><a href="Realcontact.html">CONTACT</a></li>
+          <li><a href="propertylist.html">PROPERTY LIST</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-icon">
+        <i class="fa-regular fa-user"></i>
+      </div>
+    </header>
+
+
+    <div class="hero-content1">
+
+      <p class="small-text">IT'S A LEASE, NOT A LEASH.</p>
+
+      <h1>Contact Us Today</h1>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+
+    <div class="container">
+
+      <!-- LEFT CONTENT -->
+      <div class="contact-left">
+
+        <p class="sub-title">BUY, SELL OR RENT</p>
+
+        <h1>
+          Please do not hesitate <br>
+          to contact us
+        </h1>
+
+        <p class="description">
+          <strong>Ipsum dolor sit</strong> amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat duis aute irure dolor.
+        </p>
+
+        <div class="contact-info">
+          <p><i class="fa-solid fa-location-dot"></i> 774 NE 84th St Miami, FL 33879</p>
+
+          <p><i class="fa-solid fa-phone"></i> Call us FREE +1 (800) 990 8877</p>
+
+          <p><i class="fa-solid fa-envelope"></i> email@email.com</p>
+        </div>
+
+        <div class="social-section">
+          <p>Don't forget to follow us on:</p>
+
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="contact-right">
+
+        <form>
+
+          <input type="text" placeholder="Name*" required>
+
+          <input type="email" placeholder="~Email*" required>
+
+          <input type="text" placeholder="Phone*" required>
+
+          <textarea placeholder="Message*" required></textarea>
+
+          <button type="submit">SEND NOW</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MAP SECTION -->
+  <section class="map-section">
+
+    <iframe
+      src="https://www.google.com/maps?q=Miami&output=embed"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+
+  </section>
+
+   <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- LEFT -->
+      <div class="footer-box">
+        <h2>Bridge</h2>
+        <p>
+          Lorem ipsum dolor sit amet, <br />
+          consectetur adipiscing.
+        </p>
+      </div>
+
+      <!-- CENTER -->
+      <div class="footer-box">
+        <h4>Contact</h4>
+        <p>774 NE 84th St Miami, FL 33879</p>
+        <p>Call us FREE +1(800) 990 8877</p>
+        <p>email@gmail.com</p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="footer-box newsletter">
+        <h4>Subscribe to Newsletter</h4>
+
+        <div class="newsletter-form">
+          <input type="email" placeholder="Get Newsletter..." />
+          <button>SUBMIT NOW</button>
+        </div>
+
+        <p class="follow-text">Don't forget to follow us on:</p>
+
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      Copyright © Qode Interactive 2020
+    </div>
+  </footer>
+
+</body>
+</html>
