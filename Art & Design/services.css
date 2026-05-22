@@ -1,0 +1,948 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background:#f7f3ef;
+}
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    height:90px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 60px;
+    position:fixed;
+    z-index:10;
+    backdrop-filter: blur(2px);
+}
+
+.logo{
+    font-size:60px;
+    font-family:serif;
+    color:#111;
+}
+
+/* NAV LINKS */
+
+.nav-links{
+    display:flex;
+    gap:55px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#444;
+    font-size:13px;
+    letter-spacing:3px;
+    position:relative;
+    padding-bottom:10px;
+}
+
+/* Hover Line Animation */
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:0;
+    width:0%;
+    height:1.5px;
+    background:#000;
+    transform:translateX(-50%);
+    transition:0.4s ease;
+}
+
+.nav-links a:hover::after{
+    width:45px;
+}
+
+/* Menu */
+
+.menu{
+    width:45px;
+    height:45px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:8px;
+    cursor:pointer;
+}
+
+.menu span{
+    width:100%;
+    height:1.5px;
+    background:#111;
+}
+
+/* ========================= */
+/* SECTION 1 - BRANDING */
+/* ========================= */
+
+.branding{
+  padding:100px 10%;
+  background:#f7f3ef;
+}
+
+.service-content{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+}
+
+.text{
+  flex:1;
+  animation:slideLeft 1.5s ease;
+}
+
+.text h1{
+  font-size:55px;
+  margin-bottom:20px;
+}
+
+.text p{
+  font-size:18px;
+  line-height:1.8;
+  color:#ccc;
+  margin-bottom:25px;
+}
+
+.text button{
+  padding:14px 35px;
+  border:none;
+  background:black;
+  color:white;
+  font-size:16px;
+  border-radius:30px;
+  cursor:pointer;
+  transition:0.4s;
+}
+
+.text button:hover{
+  background:white;
+  color:black;
+}
+
+.image{
+  flex:1;
+  animation:zoomIn 1.5s ease;
+}
+
+.image img{
+  width:100%;
+  border-radius:20px;
+  transition:0.5s;
+}
+
+.image img:hover{
+  transform:scale(1.04);
+}
+
+/* ========================= */
+/* SECTION 2 - UI UX */
+/* ========================= */
+
+.uiux{
+  padding:100px 10%;
+  background:#1b1b1b;
+}
+
+.reverse{
+  flex-direction:row-reverse;
+}
+
+.uiux .text{
+  animation:fadeUp 1.5s ease;
+}
+
+.uiux .image img:hover{
+  transform:scale(1.05) rotate(2deg);
+}
+
+/* ========================= */
+/* SECTION 3 - CARDS */
+/* ========================= */
+
+.illustration{
+  padding:100px 10%;
+  background:black;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.card{
+  background:#f7f3ef;
+  padding:40px 30px;
+  border-radius:20px;
+  text-align:center;
+  transition:0.5s;
+  animation:floatUp 1.5s ease;
+}
+
+.card:hover{
+  transform:translateY(-15px);
+  background:lightgray;
+}
+
+.card i{
+  font-size:45px;
+  margin-bottom:20px;
+}
+
+.card h2{
+  margin-bottom:15px;
+  font-size:28px;
+}
+
+.card p{
+  color:black;
+  line-height:1.7;
+}
+
+/* ========================= */
+/* SECTION 4 - MOTION */
+/* ========================= */
+
+.motion{
+  padding:100px 10%;
+  background:#181818;
+  text-align:center;
+}
+
+.motion-content h1{
+  font-size:55px;
+  color: #f7f3ef;
+  margin-bottom:20px;
+  animation:pulse 2s infinite;
+}
+
+.motion-content p{
+  max-width:700px;
+  margin:auto;
+  line-height:1.8;
+  color:#ccc;
+  margin-bottom:60px;
+}
+
+.circle-box{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.circle{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:#f7f3ef;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  font-weight:bold;
+  animation:rotateCircle 6s linear infinite;
+}
+
+/* ========================= */
+/* SECTION 5 - CONTACT */
+/* ========================= */
+
+.contact-service{
+  height:80vh;
+  background:url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  position:relative;
+}
+
+.overlay{
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.overlay h1{
+  font-size:60px;
+  margin-bottom:20px;
+  animation:glow 2s infinite alternate;
+}
+
+.overlay p{
+  max-width:700px;
+  line-height:1.8;
+  color:#ddd;
+  margin-bottom:30px;
+}
+
+.overlay a{
+  padding:15px 40px;
+  background:#f7f3ef;
+  color:black;
+  text-decoration:none;
+  border-radius:30px;
+  transition:0.4s;
+}
+
+.overlay a:hover{
+  background:black;
+  color:#f7f3ef;
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes slideLeft{
+  from{
+    opacity:0;
+    transform:translateX(-100px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+@keyframes zoomIn{
+  from{
+    opacity:0;
+    transform:scale(0.5);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(100px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+@keyframes floatUp{
+  from{
+    opacity:0;
+    transform:translateY(80px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes pulse{
+  0%{
+    transform:scale(1);
+  }
+  50%{
+    transform:scale(1.05);
+  }
+  100%{
+    transform:scale(1);
+  }
+}
+
+@keyframes rotateCircle{
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes glow{
+  from{
+    text-shadow:0 0 10px #f7f3ef;
+  }
+  to{
+    text-shadow:0 0 30px #f7f3ef;
+  }
+}
+/* ================= FOOTER ================= */
+
+.footer{
+    position:relative;
+    background:#0a0a0f;
+    color:white;
+    padding:120px 20px 80px;
+    text-align:center;
+    overflow:hidden;
+}
+
+.footer-overlay-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size:420px;
+    color:rgba(255,255,255,0.03);
+    font-family:serif;
+    pointer-events:none;
+}
+
+.newsletter{
+    position:relative;
+    z-index:2;
+}
+
+.newsletter h3{
+    font-size:32px;
+    margin-bottom:40px;
+    font-weight:400;
+}
+
+.newsletter-form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    border-bottom:1px solid rgba(255,255,255,0.5);
+    padding-bottom:10px;
+}
+
+.newsletter-form input{
+    flex:1;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:white;
+    font-size:18px;
+}
+
+.newsletter-form input::placeholder{
+    color:#bfbfbf;
+}
+
+.newsletter-form button{
+    background:none;
+    border:none;
+    color:white;
+    font-size:14px;
+    letter-spacing:3px;
+    cursor:pointer;
+    position:relative;
+}
+
+.newsletter-form button::after{
+    content:'';
+    width:50px;
+    height:1px;
+    background:white;
+    position:absolute;
+    top:50%;
+    left:70px;
+}
+
+.social-icons{
+    margin-top:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    position:relative;
+    z-index:2;
+}
+
+.social-icons a{
+    color:#ffffff;
+    font-size:22px;
+    text-decoration:none;
+    transition:0.3s ease;
+}
+
+.social-icons a:hover{
+    transform:translateY(-4px);
+    opacity:0.7;
+}
+
+.copyright{
+    margin-top:30px;
+    color:#bfbfbf;
+    font-size:14px;
+    position:relative;
+    z-index:2;
+}
+
+
+/* =========================================================
+   LAPTOP DEVICES
+   (1024px - 1400px)
+========================================================= */
+
+@media screen and (max-width:1400px){
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    padding:0 40px;
+}
+
+.logo{
+    font-size:50px;
+}
+
+.nav-links{
+    gap:35px;
+}
+
+.nav-links a{
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+/* ================= SECTION 1 ================= */
+
+.branding{
+    padding:90px 6%;
+}
+
+.text h1{
+    font-size:48px;
+}
+
+.text p{
+    font-size:17px;
+}
+
+.service-content{
+    gap:40px;
+}
+
+/* ================= SECTION 2 ================= */
+
+.uiux{
+    padding:90px 6%;
+}
+
+/* ================= SECTION 3 ================= */
+
+.illustration{
+    padding:90px 6%;
+}
+
+.cards{
+    gap:25px;
+}
+
+.card{
+    padding:35px 25px;
+}
+
+.card h2{
+    font-size:24px;
+}
+
+/* ================= SECTION 4 ================= */
+
+.motion{
+    padding:90px 6%;
+}
+
+.motion-content h1{
+    font-size:48px;
+}
+
+.circle{
+    width:160px;
+    height:160px;
+    font-size:22px;
+}
+
+/* ================= SECTION 5 ================= */
+
+.overlay h1{
+    font-size:52px;
+}
+
+.overlay p{
+    font-size:17px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer-overlay-text{
+    font-size:260px;
+}
+
+}
+
+
+
+/* =========================================================
+   TABLET DEVICES
+   (768px - 1023px)
+========================================================= */
+
+@media screen and (max-width:1023px){
+
+body{
+    overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    height:80px;
+    padding:0 25px;
+}
+
+.logo{
+    font-size:40px;
+}
+
+.nav-links{
+    display:none;
+}
+
+.menu{
+    width:35px;
+    height:35px;
+}
+
+/* ================= SECTION 1 ================= */
+
+.branding{
+    padding:80px 25px;
+}
+
+.service-content{
+    flex-direction:column;
+    gap:50px;
+}
+
+.text{
+    text-align:center;
+}
+
+.text h1{
+    font-size:42px;
+}
+
+.text p{
+    font-size:16px;
+    line-height:1.8;
+}
+
+.image img{
+    width:100%;
+}
+
+/* ================= SECTION 2 ================= */
+
+.uiux{
+    padding:80px 25px;
+}
+
+.reverse{
+    flex-direction:column;
+}
+
+/* ================= SECTION 3 ================= */
+
+.illustration{
+    padding:80px 25px;
+}
+
+.cards{
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.card{
+    padding:35px 25px;
+}
+
+.card h2{
+    font-size:24px;
+}
+
+/* ================= SECTION 4 ================= */
+
+.motion{
+    padding:80px 25px;
+}
+
+.motion-content h1{
+    font-size:42px;
+}
+
+.motion-content p{
+    font-size:16px;
+}
+
+.circle{
+    width:150px;
+    height:150px;
+    font-size:20px;
+}
+
+/* ================= SECTION 5 ================= */
+
+.contact-service{
+    height:auto;
+}
+
+.overlay{
+    padding:100px 25px;
+}
+
+.overlay h1{
+    font-size:44px;
+}
+
+.overlay p{
+    font-size:16px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    padding:100px 20px 60px;
+}
+
+.footer-overlay-text{
+    font-size:170px;
+}
+
+.newsletter h3{
+    font-size:28px;
+}
+
+.newsletter-form{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+    border:none;
+}
+
+.newsletter-form input{
+    width:100%;
+    border-bottom:1px solid rgba(255,255,255,0.5);
+    padding-bottom:10px;
+}
+
+}
+
+
+
+/* =========================================================
+   MOBILE DEVICES
+   (Below 768px)
+========================================================= */
+
+@media screen and (max-width:767px){
+
+body{
+    overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    height:75px;
+    padding:0 18px;
+}
+
+.logo{
+    font-size:30px;
+}
+
+.nav-links{
+    display:flex;
+}
+
+.menu{
+    width:28px;
+    height:28px;
+    gap:5px;
+}
+
+/* ================= SECTION 1 ================= */
+
+.branding{
+    padding:70px 15px;
+}
+
+.service-content{
+    flex-direction:column;
+    gap:35px;
+}
+
+.text{
+    text-align:center;
+}
+
+.text h1{
+    font-size:34px;
+    line-height:1.3;
+}
+
+.text p{
+    font-size:15px;
+    line-height:1.7;
+}
+
+.text button{
+    padding:12px 28px;
+    font-size:14px;
+}
+
+.image img{
+    border-radius:12px;
+}
+
+/* ================= SECTION 2 ================= */
+
+.uiux{
+    padding:70px 15px;
+}
+
+.reverse{
+    flex-direction:column;
+}
+
+/* ================= SECTION 3 ================= */
+
+.illustration{
+    padding:70px 15px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.card{
+    padding:30px 20px;
+}
+
+.card i{
+    font-size:36px;
+}
+
+.card h2{
+    font-size:22px;
+}
+
+.card p{
+    font-size:14px;
+}
+
+/* ================= SECTION 4 ================= */
+
+.motion{
+    padding:70px 15px;
+}
+
+.motion-content h1{
+    font-size:34px;
+    line-height:1.3;
+}
+
+.motion-content p{
+    font-size:15px;
+    line-height:1.7;
+}
+
+.circle-box{
+    gap:20px;
+}
+
+.circle{
+    width:120px;
+    height:120px;
+    font-size:18px;
+}
+
+/* ================= SECTION 5 ================= */
+
+.contact-service{
+    height:auto;
+}
+
+.overlay{
+    padding:80px 15px;
+}
+
+.overlay h1{
+    font-size:34px;
+    line-height:1.3;
+}
+
+.overlay p{
+    font-size:15px;
+    line-height:1.7;
+}
+
+.overlay a{
+    padding:12px 28px;
+    font-size:14px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    padding:70px 15px 40px;
+}
+
+.footer-overlay-text{
+    font-size:80px;
+}
+
+.newsletter h3{
+    font-size:22px;
+    line-height:1.4;
+}
+
+.newsletter-form input{
+    font-size:15px;
+}
+
+.newsletter-form button{
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+.newsletter-form button::after{
+    width:35px;
+    left:55px;
+}
+
+.social-icons{
+    gap:18px;
+}
+
+.social-icons a{
+    font-size:18px;
+}
+
+.copyright{
+    font-size:12px;
+}
+
+}

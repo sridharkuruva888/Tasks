@@ -1,0 +1,995 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background:#f7f3ef;
+}
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    height:90px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 60px;
+    position:fixed;
+    z-index:10;
+    backdrop-filter: blur(2px);
+}
+
+.logo{
+    font-size:60px;
+    font-family:serif;
+    color:#111;
+}
+
+/* NAV LINKS */
+
+.nav-links{
+    display:flex;
+    gap:55px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#444;
+    font-size:13px;
+    letter-spacing:3px;
+    position:relative;
+    padding-bottom:10px;
+}
+
+/* Hover Line Animation */
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:0;
+    width:0%;
+    height:1.5px;
+    background:#000;
+    transform:translateX(-50%);
+    transition:0.4s ease;
+}
+
+.nav-links a:hover::after{
+    width:45px;
+}
+
+/* Menu */
+
+.menu{
+    width:45px;
+    height:45px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:8px;
+    cursor:pointer;
+}
+
+.menu span{
+    width:100%;
+    height:1.5px;
+    background:#111;
+}
+
+/* ========================================= */
+/* SECTION 1 */
+/* ========================================= */
+
+.portfolio-hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    background:
+    linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),
+    url('https://bridge498.qodeinteractive.com/wp-content/uploads/2018/07/main-home-portfolio-featured-1.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.hero-content{
+    text-align:center;
+    width:80%;
+    animation:fadeUp 2s ease infinite;
+}
+
+.hero-content h1{
+    font-size:80px;
+    letter-spacing:5px;
+    font-family:'Cormorant Garamond',serif;
+    color:#222;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:18px;
+    color:#444;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.hero-btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:14px 40px;
+    border:1px solid #222;
+    text-decoration:none;
+    color:#222;
+    transition:0.5s;
+    letter-spacing:2px;
+}
+
+.hero-btn:hover{
+    background:#222;
+    color:#fff;
+    transform:translateY(-5px);
+}
+
+/* ========================================= */
+/* SECTION 2 */
+/* ========================================= */
+
+.gallery-section{
+    padding:120px 8%;
+    background:#ffffff;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title h2{
+    font-size:55px;
+    font-family:'Cormorant Garamond',serif;
+    color:#222;
+    animation:fadeIn 2s ease;
+}
+
+.gallery-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+.gallery-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.5s;
+    animation:zoomIn 1.5s ease;
+}
+
+.gallery-card img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    transition:0.7s;
+}
+
+.gallery-card:hover img{
+    transform:scale(1.1);
+}
+
+.gallery-content{
+    position:absolute;
+    bottom:-100%;
+    left:0;
+    width:100%;
+    padding:30px;
+    background:rgba(0,0,0,0.7);
+    color:#fff;
+    transition:0.5s;
+}
+
+.gallery-card:hover .gallery-content{
+    bottom:0;
+}
+
+.gallery-content h3{
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+/* ========================================= */
+/* SECTION 3 */
+/* ========================================= */
+
+.split-section{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:100px 8%;
+    gap:70px;
+    background:#f4f4f2;
+}
+
+.split-image{
+    flex:1;
+    animation:slideLeft 2s ease;
+}
+
+.split-image img{
+    width:100%;
+    border-radius:20px;
+}
+
+.split-content{
+    flex:1;
+    animation:slideRight 2s ease;
+}
+
+.split-content h2{
+    font-size:60px;
+    margin-bottom:25px;
+    color:#222;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.split-content p{
+    font-size:17px;
+    line-height:2;
+    color:#555;
+    margin-bottom:30px;
+}
+
+.split-content a{
+    text-decoration:none;
+    padding:14px 35px;
+    border:1px solid #222;
+    color:#222;
+    transition:0.5s;
+}
+
+.split-content a:hover{
+    background:#222;
+    color:#fff;
+}
+
+/* ========================================= */
+/* SECTION 4 */
+/* ========================================= */
+
+.stats-section{
+    width:100%;
+    padding:120px 8%;
+    display:flex;
+    justify-content:space-between;
+    background:#fff;
+    gap:30px;
+}
+
+.stats-box{
+    flex:1;
+    padding:60px 30px;
+    text-align:center;
+    background:#f7f7f7;
+    border-radius:20px;
+    transition:0.5s;
+    animation:floatBox 3s infinite alternate;
+}
+
+/* .stats-box:hover{
+    transform:translateY(-10px);
+} */
+
+.stats-box h2{
+    font-size:60px;
+    margin-bottom:15px;
+    color:#222;
+}
+
+.stats-box p{
+    font-size:18px;
+    color:#666;
+}
+
+/* ========================================= */
+/* SECTION 5 */
+/* ========================================= */
+
+.contact-section{
+    width:100%;
+    height:80vh;
+    background:
+    linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)),
+    url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1600');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.contact-content{
+    width:70%;
+    animation:fadeUp 2s ease;
+}
+
+.contact-content h2{
+    font-size:70px;
+    color:#222;
+    margin-bottom:25px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.contact-content p{
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+    margin-bottom:35px;
+}
+
+.contact-content a{
+    text-decoration:none;
+    padding:15px 40px;
+    border:1px solid #222;
+    color:#222;
+    transition:0.5s;
+}
+
+.contact-content a:hover{
+    background:#222;
+    color:#fff;
+}
+
+/* ========================================= */
+/* ANIMATIONS */
+/* ========================================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes slideLeft{
+    from{
+        opacity:0;
+        transform:translateX(-100px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes slideRight{
+    from{
+        opacity:0;
+        transform:translateX(100px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes zoomIn{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes floatBox{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-15px);
+    }
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    position:relative;
+    background:#0a0a0f;
+    color:white;
+    padding:120px 20px 80px;
+    text-align:center;
+    overflow:hidden;
+}
+
+.footer-overlay-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size:420px;
+    color:rgba(255,255,255,0.03);
+    font-family:serif;
+    pointer-events:none;
+}
+
+.newsletter{
+    position:relative;
+    z-index:2;
+}
+
+.newsletter h3{
+    font-size:32px;
+    margin-bottom:40px;
+    font-weight:400;
+}
+
+.newsletter-form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    border-bottom:1px solid rgba(255,255,255,0.5);
+    padding-bottom:10px;
+}
+
+.newsletter-form input{
+    flex:1;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:white;
+    font-size:18px;
+}
+
+.newsletter-form input::placeholder{
+    color:#bfbfbf;
+}
+
+.newsletter-form button{
+    background:none;
+    border:none;
+    color:white;
+    font-size:14px;
+    letter-spacing:3px;
+    cursor:pointer;
+    position:relative;
+}
+
+.newsletter-form button::after{
+    content:'';
+    width:50px;
+    height:1px;
+    background:white;
+    position:absolute;
+    top:50%;
+    left:70px;
+}
+
+.social-icons{
+    margin-top:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    position:relative;
+    z-index:2;
+}
+
+.social-icons a{
+    color:#ffffff;
+    font-size:22px;
+    text-decoration:none;
+    transition:0.3s ease;
+}
+
+.social-icons a:hover{
+    transform:translateY(-4px);
+    opacity:0.7;
+}
+
+.copyright{
+    margin-top:30px;
+    color:#bfbfbf;
+    font-size:14px;
+    position:relative;
+    z-index:2;
+}
+
+/* =========================================================
+   LAPTOP DEVICES
+   (1024px - 1400px)
+========================================================= */
+
+@media screen and (max-width:1400px){
+
+/* ================= HEADER & NAVBAR ================= */
+
+.navbar{
+    padding:0 40px;
+}
+
+.logo{
+    font-size:50px;
+}
+
+.nav-links{
+    gap:35px;
+}
+
+.nav-links a{
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+/* ================= SECTION 1 ================= */
+
+.hero-content h1{
+    font-size:65px;
+}
+
+.hero-content p{
+    font-size:17px;
+}
+
+/* ================= SECTION 2 ================= */
+
+.gallery-section{
+    padding:100px 5%;
+}
+
+.gallery-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.gallery-card img{
+    height:400px;
+}
+
+.section-title h2{
+    font-size:48px;
+}
+
+/* ================= SECTION 3 ================= */
+
+.split-section{
+    padding:90px 5%;
+    gap:50px;
+}
+
+.split-content h2{
+    font-size:50px;
+}
+
+.split-content p{
+    font-size:16px;
+}
+
+/* ================= SECTION 4 ================= */
+
+.stats-section{
+    padding:100px 5%;
+}
+
+.stats-box h2{
+    font-size:50px;
+}
+
+/* ================= SECTION 5 ================= */
+
+.contact-content h2{
+    font-size:55px;
+}
+
+.contact-content p{
+    font-size:17px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer-overlay-text{
+    font-size:260px;
+}
+
+}
+
+
+
+/* =========================================================
+   TABLET DEVICES
+   (768px - 1023px)
+========================================================= */
+
+@media screen and (max-width:1023px){
+
+body{
+    overflow-x:hidden;
+}
+
+/* ================= HEADER & NAVBAR ================= */
+
+.navbar{
+    height:80px;
+    padding:0 25px;
+}
+
+.logo{
+    font-size:40px;
+}
+
+.nav-links{
+    display:none;
+}
+
+.menu{
+    width:35px;
+    height:35px;
+}
+
+/* ================= SECTION 1 ================= */
+
+.portfolio-hero{
+    height:auto;
+    min-height:100vh;
+    padding:120px 20px 80px;
+}
+
+.hero-content{
+    width:90%;
+}
+
+.hero-content h1{
+    font-size:52px;
+    line-height:1.3;
+}
+
+.hero-content p{
+    font-size:16px;
+    line-height:1.7;
+}
+
+/* ================= SECTION 2 ================= */
+
+.gallery-section{
+    padding:80px 25px;
+}
+
+.gallery-container{
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.gallery-card img{
+    height:320px;
+}
+
+.section-title{
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:42px;
+}
+
+.gallery-content h3{
+    font-size:24px;
+}
+
+/* ================= SECTION 3 ================= */
+
+.split-section{
+    flex-direction:column;
+    padding:80px 25px;
+    gap:50px;
+    min-height:auto;
+}
+
+.split-content{
+    text-align:center;
+}
+
+.split-content h2{
+    font-size:44px;
+}
+
+.split-content p{
+    font-size:16px;
+}
+
+/* ================= SECTION 4 ================= */
+
+.stats-section{
+    flex-direction:column;
+    padding:80px 25px;
+}
+
+.stats-box{
+    width:100%;
+}
+
+.stats-box h2{
+    font-size:50px;
+}
+
+/* ================= SECTION 5 ================= */
+
+.contact-section{
+    height:auto;
+    padding:100px 20px;
+}
+
+.contact-content{
+    width:90%;
+}
+
+.contact-content h2{
+    font-size:46px;
+}
+
+.contact-content p{
+    font-size:16px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    padding:100px 20px 60px;
+}
+
+.footer-overlay-text{
+    font-size:170px;
+}
+
+.newsletter h3{
+    font-size:28px;
+}
+
+.newsletter-form{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+    border:none;
+}
+
+.newsletter-form input{
+    width:100%;
+    border-bottom:1px solid rgba(255,255,255,0.5);
+    padding-bottom:10px;
+}
+
+}
+
+
+
+/* =========================================================
+   MOBILE DEVICES
+   (Below 768px)
+========================================================= */
+
+@media screen and (max-width:767px){
+
+body{
+    overflow-x:hidden;
+}
+
+/* ================= HEADER & NAVBAR ================= */
+
+.navbar{
+    height:75px;
+    /* padding:0 18px; */
+}
+
+.logo{
+    font-size:30px;
+}
+
+.nav-links{
+    display:flex;
+}
+
+.menu{
+    width:28px;
+    height:28px;
+    gap:5px;
+}
+
+/* ================= SECTION 1 ================= */
+
+.portfolio-hero{
+    height:auto;
+    min-height:100vh;
+    padding:100px 15px 60px;
+}
+
+.hero-content{
+    width:100%;
+}
+
+.hero-content h1{
+    font-size:38px;
+    line-height:1.3;
+    letter-spacing:2px;
+}
+
+.hero-content p{
+    font-size:15px;
+    line-height:1.7;
+}
+
+.hero-btn{
+    padding:12px 30px;
+    font-size:14px;
+}
+
+/* ================= SECTION 2 ================= */
+
+.gallery-section{
+    padding:60px 15px;
+}
+
+.gallery-container{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.gallery-card img{
+    height:280px;
+}
+
+.section-title{
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:34px;
+}
+
+.gallery-content{
+    padding:20px;
+}
+
+.gallery-content h3{
+    font-size:22px;
+}
+
+/* ================= SECTION 3 ================= */
+
+.split-section{
+    flex-direction:column;
+    padding:60px 15px;
+    gap:40px;
+}
+
+.split-image img{
+    border-radius:12px;
+}
+
+.split-content{
+    text-align:center;
+}
+
+.split-content h2{
+    font-size:34px;
+}
+
+.split-content p{
+    font-size:15px;
+    line-height:1.8;
+}
+
+.split-content a{
+    padding:12px 28px;
+}
+
+/* ================= SECTION 4 ================= */
+
+.stats-section{
+    flex-direction:column;
+    padding:60px 15px;
+    gap:20px;
+}
+
+.stats-box{
+    padding:40px 20px;
+}
+
+.stats-box h2{
+    font-size:40px;
+}
+
+.stats-box p{
+    font-size:15px;
+}
+
+/* ================= SECTION 5 ================= */
+
+.contact-section{
+    height:auto;
+    padding:80px 15px;
+}
+
+.contact-content{
+    width:100%;
+}
+
+.contact-content h2{
+    font-size:34px;
+    line-height:1.3;
+}
+
+.contact-content p{
+    font-size:15px;
+    line-height:1.7;
+}
+
+.contact-content a{
+    padding:12px 28px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    padding:70px 15px 40px;
+}
+
+.footer-overlay-text{
+    font-size:80px;
+}
+
+.newsletter h3{
+    font-size:22px;
+    line-height:1.4;
+}
+
+.newsletter-form input{
+    font-size:15px;
+}
+
+.newsletter-form button{
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+.newsletter-form button::after{
+    width:35px;
+    left:55px;
+}
+
+.social-icons{
+    gap:18px;
+}
+
+.social-icons a{
+    font-size:18px;
+}
+
+.copyright{
+    font-size:12px;
+}
+
+}
