@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #0b0f1a;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      /* NAVBAR */
+
+      .navbar {
+        background: #000;
+        padding: 15px 0;
+      }
+
+      .navbar-brand {
+        color: #00ffcc !important;
+        letter-spacing: 1px;
+      }
+
+      .nav-link {
+        color: white !important;
+        margin-left: 15px;
+        transition: 0.4s;
+        font-weight: 500;
+      }
+
+      .nav-link:hover {
+        color: #00ffcc !important;
+      }
+
+      /* ALL SECTIONS */
+
+      section {
+        width: 100%;
+      }
+
+      section h1,
+      section h2 {
+        letter-spacing: 1px;
+      }
+
+      /* TEXT COLORS */
+
+      .text-info {
+        color: #00ffcc !important;
+      }
+
+      /* BUTTONS */
+
+      .btn-info {
+        background: #00ffcc !important;
+        border: none;
+        color: black !important;
+        padding: 10px 25px;
+        font-weight: 600;
+        transition: 0.4s;
+      }
+
+      .btn-info:hover {
+        transform: translateY(-5px);
+        background: white !important;
+      }
+
+      /* CARDS */
+
+      .card {
+        overflow: hidden;
+        transition: 0.5s;
+        border-radius: 15px;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card img {
+        height: 250px;
+        object-fit: cover;
+      }
+
+      /* DARK BOXES */
+
+      .bg-dark {
+        background: #121826 !important;
+      }
+
+      .bg-black {
+        background: #0b0f1a !important;
+      }
+
+      /* LIVE MATCH BOX */
+
+      .bg-dark.rounded {
+        transition: 0.5s;
+      }
+
+      .bg-dark.rounded:hover {
+        transform: scale(1.05);
+        background: #1b2435 !important;
+      }
+
+      /* GALLERY */
+
+      img {
+        transition: 0.5s;
+      }
+
+      img:hover {
+        transform: scale(1.03);
+      }
+
+      footer {
+        background: black;
+      }
+
+      .social-icons a {
+        width: 45px;
+        height: 45px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #00ffcc;
+        color: black;
+        border-radius: 50%;
+        margin: 10px;
+        text-decoration: none;
+        transition: 0.4s;
+        font-size: 1.2rem;
+      }
+
+      .social-icons a:hover {
+        transform: translateY(-5px);
+        background: white;
+      }
+
+    
+    </style>
+  </head>
+  <body>
+    <!-- SPORTS PAGE -->
+
+    <!-- HEADER -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-info fs-2" href="#"> SportsZone </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="sports.html">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="livescores.html">Live Scores</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SECTION 1 -->
+
+    <section class="py-5 bg-black text-white">
+      <div class="container text-center">
+        <h1 class="display-4 fw-bold text-info">Explore The World Of Sports</h1>
+
+        <p class="lead mt-3">
+          Discover trending matches, tournaments and sports highlights.
+        </p>
+
+        <button class="btn btn-info btn-lg mt-3">Explore More</button>
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+
+    <section class="py-5 bg-dark text-white">
+      <div class="container">
+        <h2 class="text-center text-info fw-bold mb-5">Popular Sports</h2>
+
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="card bg-black text-white border-0 h-100">
+              <img
+                src="https://images.openai.com/static-rsc-4/pmu7pIrVNPuQWykOVf0Frm-b9uHrGTWMmDa2nxHqDKHr3Iv-Yep_aG8xJD9YCU4DC4AdFpUQUQvEBPOZWmk87YEZYWuw1YDDQz2o48qLqxCBDhqxBd5CvlD-FtDZFI9Jc5CJ5MJ0L_6vfvfqa7XJD67OLbdR12m474MToYr22Z14LbKuw-Hz61HV2oI707CW?purpose=fullsize"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body text-center">
+                <h4>Football</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card bg-black text-white border-0 h-100">
+              <img
+                src="https://images.openai.com/static-rsc-4/ne3Q5oZ2-IV6nFVMjrz-_3XB2BotUMknIcVIu3JeVQnon9eqGbyPwGowMzzUJO7VmXs2l1QrPh1O1XkVX7xt1dFttIwjCgS8pkHxwnDjXDIh55YlBPtYgyzQCLp81vwOOcBomrfGRQzojRogfAHyVb3FQtcpYR9Fk7B_qr1INHvOxbS0S35UfkN-VOzNsHBd?purpose=fullsize"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body text-center">
+                <h4>Cricket</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card bg-black text-white border-0 h-100">
+              <img
+                src="https://images.openai.com/static-rsc-4/TGnq9B3OsUBcis5AGmg1VdkA5nuM2y9KQOwHjOgLgE9nFQ3n4gq_4-ZzeRzl2385sVDiDEplLQ2IYvgNv_vb_WJDpC_CaOwIY3T96dh5O0pkHtwNgUJDMEk4eqK7gNddhk6wJ6Q52nc3V27j2hQm3DMHrBDxMm5IcdUoZ_9gj_3AXaIdanw--MeEzif6YzVz?purpose=fullsize"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body text-center">
+                <h4>Basketball</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card bg-black text-white border-0 h-100">
+              <img
+                src="https://images.openai.com/static-rsc-4/BXwJ93SYAiAEeaccynymOAOb2ai_tCtWMLG3J77FIbI8ycCs0isnyCELkzTBpOnUWYeq8pPLgc2r3l__FXCqDM6Vym1NBndTiMenSJvXX_vy6BRies2hT8scQGZaiDpwUoVHcATszBRNRZ7V_-Ww_-BdFNZHCeoHtZXC4Arvu52zbi9-BynANZ7A1o_fDyMT?purpose=fullsize"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body text-center">
+                <h4>Tennis</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+
+    <section class="py-5 bg-black text-white">
+      <div class="container">
+        <h2 class="text-center text-info fw-bold mb-5">Live Match Updates</h2>
+
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="p-4 bg-dark rounded text-center h-100">
+              <h3>Football Finals</h3>
+              <p>Manchester vs Madrid</p>
+              <button class="btn btn-info">Live</button>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="p-4 bg-dark rounded text-center h-100">
+              <h3>IPL Match</h3>
+              <p>RCB vs CSK</p>
+              <button class="btn btn-info">Live</button>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="p-4 bg-dark rounded text-center h-100">
+              <h3>NBA Finals</h3>
+              <p>Lakers vs Celtics</p>
+              <button class="btn btn-info">Live</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 -->
+
+    <section class="py-5 bg-dark text-white">
+      <div class="container">
+        <h2 class="text-center text-info fw-bold mb-5">Sports Gallery</h2>
+
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <img
+              src="https://images.openai.com/static-rsc-4/g5wenSMx0g1q56imBC0wX6ksOOe-CxUBSAStp_Jp-W26jPskt41youVej1Ut4j7ZekpoHISDDeAglq9m8Br91gd-W0LQLUY8sLeFwwKaWOAYWi3_p8Lm1DrDsXD4Fn9xOWGAIjZQ8T9kwxqARDjiqdNnkhiPPLU4zjXozSfmqMmi123It7qJmjO4exEYMbPe?purpose=fullsize"
+              class="img-fluid rounded"
+              alt=""
+            />
+          </div>
+
+          <div class="col-lg-4">
+            <img
+              src="https://images.openai.com/static-rsc-4/Hd8M3pQVe7vgW5VOAI1jgcL9qDvdtYDUPl9rZcWlaeia533tpp_t954sEQyxXLs5ttBhnduumah3K-hgclRfCKYt5MusPgXgIZs2GQIa2GiqTtNUizTkENEtSQ6pyV5zhba1l018rEWDXmIqkv6OVy93njKMXdC_k2mGDRp3f9Jny_xkQtlAtJkrRo42QmU_?purpose=fullsize"
+              class="img-fluid rounded"
+              alt=""
+            />
+          </div>
+
+          <div class="col-lg-4">
+            <img
+              src="https://images.openai.com/static-rsc-4/BXwJ93SYAiAEeaccynymOAOb2ai_tCtWMLG3J77FIbI8ycCs0isnyCELkzTBpOnUWYeq8pPLgc2r3l__FXCqDM6Vym1NBndTiMenSJvXX_vy6BRies2hT8scQGZaiDpwUoVHcATszBRNRZ7V_-Ww_-BdFNZHCeoHtZXC4Arvu52zbi9-BynANZ7A1o_fDyMT?purpose=fullsize"
+              class="img-fluid rounded"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 -->
+
+    <section class="py-5 bg-black text-white">
+      <div class="container">
+        <h2 class="text-center text-info fw-bold mb-5">Latest Sports News</h2>
+
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="card bg-dark border-0 text-white h-100">
+              <div class="card-body">
+                <h4>Football Championship</h4>
+                <p>Latest football tournament highlights and updates.</p>
+                <button class="btn btn-info">Read More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card bg-dark border-0 text-white h-100">
+              <div class="card-body">
+                <h4>Cricket League</h4>
+                <p>Explore exciting cricket moments and scores.</p>
+                <button class="btn btn-info">Read More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card bg-dark border-0 text-white h-100">
+              <div class="card-body">
+                <h4>Basketball Finals</h4>
+                <p>NBA finals and top player achievements updates.</p>
+                <button class="btn btn-info">Read More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5" id="contact">
+      <div class="container text-center">
+        <h2 class="mb-4">SportsZone</h2>
+        <p>
+          Your ultimate destination for sports news, tournaments and live
+          updates.
+        </p>
+
+        <div class="social-icons mt-4 mb-4">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+
+        <p class="mb-0">© 2026 SportsZone. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

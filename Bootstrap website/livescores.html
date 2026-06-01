@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #0b0f1a;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      /* NAVBAR */
+
+      .navbar {
+        background: #000;
+        padding: 15px 0;
+      }
+
+      .navbar-brand {
+        color: #00ffcc !important;
+        letter-spacing: 1px;
+      }
+
+      .nav-link {
+        color: white !important;
+        margin-left: 15px;
+        transition: 0.4s;
+        font-weight: 500;
+      }
+
+      .nav-link:hover {
+        color: #00ffcc !important;
+      }
+
+      /* SECTION TITLE */
+
+      .section-title {
+        color: #00ffcc;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      /* SCORE CARD */
+
+      .score-card {
+        background: #121826;
+        border-radius: 20px;
+        padding: 30px;
+        transition: 0.5s;
+        height: 100%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      .score-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .live {
+        background: #00ffcc;
+        color: black;
+        padding: 5px 15px;
+        border-radius: 30px;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 15px;
+      }
+
+      /* MATCH BOX */
+
+      .match-box {
+        background: #121826;
+        border-radius: 20px;
+        padding: 25px;
+        transition: 0.5s;
+        text-align: center;
+        height: 100%;
+      }
+
+      .match-box:hover {
+        transform: scale(1.05);
+        background: #1b2435;
+      }
+
+      .team-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .score {
+        color: #00ffcc;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 15px 0;
+      }
+
+      /* TABLE */
+
+      .table {
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .table-dark {
+        background: #121826 !important;
+      }
+
+      /* NEWS CARD */
+
+      .news-card {
+        background: #121826;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: 0.5s;
+        height: 100%;
+      }
+
+      .news-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .news-card img {
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .btn-custom {
+        background: #00ffcc;
+        color: black;
+        border: none;
+        padding: 10px 25px;
+        font-weight: bold;
+        border-radius: 10px;
+        transition: 0.4s;
+      }
+
+      .btn-custom:hover {
+        background: white;
+        transform: translateY(-5px);
+      }
+
+      footer {
+        background: black;
+      }
+
+      .social-icons a {
+        width: 45px;
+        height: 45px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #00ffcc;
+        color: black;
+        border-radius: 50%;
+        margin: 10px;
+        text-decoration: none;
+        transition: 0.4s;
+        font-size: 1.2rem;
+      }
+
+      .social-icons a:hover {
+        transform: translateY(-5px);
+        background: white;
+      }
+
+    
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-info fs-2" href="#"> SportsZone </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="sports.html">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="livescores.html">Live Scores</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SECTION 1 -->
+
+    <section class="py-5">
+      <div class="container">
+        <h2 class="section-title">Live Cricket Scores</h2>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="score-card">
+              <span class="live">LIVE</span>
+
+              <h4>RCB vs CSK</h4>
+
+              <p class="mt-3">IPL 2026 • M Chinnaswamy Stadium</p>
+
+              <h2 class="text-info">186 / 4</h2>
+
+              <p>Overs : 18.2</p>
+
+              <button class="btn-custom">View Match</button>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="score-card">
+              <span class="live">LIVE</span>
+
+              <h4>IND vs AUS</h4>
+
+              <p class="mt-3">ODI Series • Mumbai</p>
+
+              <h2 class="text-info">245 / 6</h2>
+
+              <p>Overs : 42.1</p>
+
+              <button class="btn-custom">View Match</button>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="score-card">
+              <span class="live">LIVE</span>
+
+              <h4>MI vs KKR</h4>
+
+              <p class="mt-3">IPL 2026 • Wankhede Stadium</p>
+
+              <h2 class="text-info">172 / 5</h2>
+
+              <p>Overs : 17.4</p>
+
+              <button class="btn-custom">View Match</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+
+    <section class="py-5 bg-dark">
+      <div class="container">
+        <h2 class="section-title">Upcoming Matches</h2>
+
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="match-box">
+              <h4 class="team-name">India</h4>
+
+              <div class="score">VS</div>
+
+              <h4 class="team-name">England</h4>
+
+              <p class="mt-3">Tomorrow • 7:30 PM</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="match-box">
+              <h4 class="team-name">Brazil</h4>
+
+              <div class="score">VS</div>
+
+              <h4 class="team-name">Argentina</h4>
+
+              <p class="mt-3">Friday • 9:00 PM</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="match-box">
+              <h4 class="team-name">Lakers</h4>
+
+              <div class="score">VS</div>
+
+              <h4 class="team-name">Celtics</h4>
+
+              <p class="mt-3">Saturday • 8:00 PM</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="match-box">
+              <h4 class="team-name">Nadal</h4>
+
+              <div class="score">VS</div>
+
+              <h4 class="team-name">Djokovic</h4>
+
+              <p class="mt-3">Sunday • 6:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+
+    <section class="py-5">
+      <div class="container">
+        <h2 class="section-title">Points Table</h2>
+
+        <div class="table-responsive">
+          <table
+            class="table table-dark table-bordered text-center align-middle"
+          >
+            <thead>
+              <tr>
+                <th>Team</th>
+                <th>Matches</th>
+                <th>Wins</th>
+                <th>Points</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>RCB</td>
+                <td>12</td>
+                <td>9</td>
+                <td>18</td>
+              </tr>
+
+              <tr>
+                <td>CSK</td>
+                <td>12</td>
+                <td>8</td>
+                <td>16</td>
+              </tr>
+
+              <tr>
+                <td>MI</td>
+                <td>12</td>
+                <td>7</td>
+                <td>14</td>
+              </tr>
+
+              <tr>
+                <td>KKR</td>
+                <td>12</td>
+                <td>6</td>
+                <td>12</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 -->
+
+    <section class="py-5 bg-dark">
+      <div class="container">
+        <h2 class="section-title">Sports Highlights</h2>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="news-card">
+              <img
+                src="https://images.openai.com/static-rsc-4/cYi5GxUFZchCTIDJZxEKwXgWFesVaxjUY2myW1MZ-PnqdDWa2kqM-Btb9GhEo12_quaYH9RfdetcruBNNHSlpKN9bEyGF3iT_NkbQ2iIAjgXvRGzCXKiStSHQZn_SGkQd_SL_ZNkj4t6X5A8LsuygEHfWvreuqdz4L06ZmBZqw_7knsOvnTHd1ycNjNnDXzH?purpose=fullsize"
+                class="img-fluid w-100"
+                alt=""
+              />
+
+              <div class="p-4">
+                <h4>Cricket Finals</h4>
+
+                <p class="mt-3">
+                  Explore thrilling cricket final match highlights.
+                </p>
+
+                <button class="btn-custom">Watch Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="news-card">
+              <img
+                src="https://images.openai.com/static-rsc-4/cYi5GxUFZchCTIDJZxEKwXgWFesVaxjUY2myW1MZ-PnqdDWa2kqM-Btb9GhEo12_quaYH9RfdetcruBNNHSlpKN9bEyGF3iT_NkbQ2iIAjgXvRGzCXKiStSHQZn_SGkQd_SL_ZNkj4t6X5A8LsuygEHfWvreuqdz4L06ZmBZqw_7knsOvnTHd1ycNjNnDXzH?purpose=fullsize"
+                class="img-fluid w-100"
+                alt=""
+              />
+
+              <div class="p-4">
+                <h4>Football Goals</h4>
+
+                <p class="mt-3">
+                  Amazing football goals and championship moments.
+                </p>
+
+                <button class="btn-custom">Watch Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="news-card">
+              <img
+                src="https://images.openai.com/static-rsc-4/dcjQEVsZ6feAR70vysGbjPHVr94qtm0vysJAb4P91FQaT0PbMz_XQ_Dp6q4CzAv4jaXudMW6b0GrDtrM7wHJIFBWmqDElXt40HkL3VGHPe4etBKa_hUhhDvXFjhfTN15MyAjuhbQUTVvC1OfFTqhR2DwiTU0qHptnRp8L_d2h3iNSCQAGos2n7iIQhGy98Qr?purpose=fullsize"
+                class="img-fluid w-100"
+                alt=""
+              />
+
+              <div class="p-4">
+                <h4>NBA Highlights</h4>
+
+                <p class="mt-3">
+                  Top basketball dunks and exciting match moments.
+                </p>
+
+                <button class="btn-custom">Watch Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5" id="contact">
+      <div class="container text-center">
+        <h2 class="mb-4">SportsZone</h2>
+        <p>
+          Your ultimate destination for sports news, tournaments and live
+          updates.
+        </p>
+
+        <div class="social-icons mt-4 mb-4">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+
+        <p class="mb-0">© 2026 SportsZone. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
