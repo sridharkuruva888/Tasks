@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Redeclaring a variable using var</h2>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+     <p id="demo5"></p>
+    <script>
+        var a=18;
+        const name="sridhar";
+         document.getElementById('demo').innerHTML=a;
+        {
+            var a=8;
+            const name="kohli";
+              console.log(name);
+        }
+         document.getElementById('demo1').innerHTML=name;
+        document.getElementById('demo5').innerHTML=a;
+       
+    </script>
+
+
+<h2>Javascript let</h2>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script>
+    let players=["Dhoni","Sachin","yuvraj"];
+    players[1]="Virat Kohli";
+    players.push("Ambati rayudu");
+    document.getElementById('demo3').innerHTML=players;
+    document.getElementById('demo4').innerHTML=players[1];
+</script>
+
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+
+<script>
+    let name1="sridhar"+1+10;
+    document.getElementById('demo6').innerHTML=name1;
+    let name2=10+8+"kohli";
+    document.getElementById('demo7').innerHTML=name2;
+    const person1={firstname:"sridhar",lastname:"kuruva",age:25,};
+    document.getElementById('demo8').innerHTML=person1.firstname+person1.lastname+"<br>"+person1.age;
+
+    const fruits=["banana","apple","mango","orange"];
+    let list=fruits.toString();
+    document.getElementById('demo9').innerHTML=list;
+</script>
+</body>
+</html>

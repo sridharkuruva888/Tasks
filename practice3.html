@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">js variables</h1>
+    <div id="demo"  style="text-align: center;"></div>
+
+    <script>
+        let x=8;
+        let y=10;
+        let z=x/y;
+
+        document.getElementById('demo').innerHTML ="The value of Z is:" + z;
+    </script>
+    
+    <h1 id="home">Sridhar</h1>
+    <p id="about">Sridhar</p>
+
+    <button type="button" onclick="document.getElementById('about').innerHTML='sridhar is a good boy'">click</button>
+   <script>
+    document.getElementById('home').style.color="blue";
+     document.getElementById('home').style.letterSpacing="3px";
+   </script>
+
+
+<div class="container style=display:grid" >
+    <h1 id="class1">sridhar</h1>
+    <button type="button" onclick="document.getElementById('class1').innerHTML='good boy'">click</button>
+
+     <h1 id="class2">variables</h1>
+    <button type="button" onclick="document.getElementById('class2').innerHTML='Let,const,var'">click</button>
+
+     <h1 id="class3">sridhar</h1>
+    <button type="button" onclick="document.getElementById('class3').style.color='red'">click</button>
+
+     <h1 id="class4">sridhar</h1>
+    <button type="button" onclick="document.getElementById('class4').style.letterSpacing='10px'">click</button>
+</div>
+<p id="demo2"></p>
+<script>
+let a = 5;
+let b = 6;
+let c = a + b;
+let name="sridhar";
+let age = 25;
+var rank=1;
+const surname= "kuruva";
+document.getElementById('demo2').innerHTML=surname + name + age + rank;
+console.log(c);
+</script>
+
+<h1>JavaScript Operators</h1>
+<h2>The typeof Operator</h2>
+<p>The typeof operator returns the type of a variable or an expression.</p>
+
+<p id="demo5"></p>
+
+<script>
+    var rank=2;
+document.getElementById("demo5").innerHTML = 
+typeof "" + "<br>" +
+typeof "John" + "<br>" +    
+typeof "John Doe" +rank;
+</script>
+
+</body>
+</html>
