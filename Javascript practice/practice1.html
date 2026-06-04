@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 10;
+      let b = 8;
+      let d = 2;
+      let c = a + b;
+      console.log(c);
+
+      let y = a - b;
+      console.log(y);
+
+      let x = a * b;
+      console.log(x);
+
+      let z = a / b;
+      console.log(z);
+
+      let s = 8 ** 2;
+      console.log(s);
+
+      let m = a % b;
+      console.log(m);
+
+      a++;
+      console.log(a);
+      console.log(++a);
+
+      b--;
+      console.log(b);
+      console.log(--b);
+
+      let f = (1010 + 50) / d;
+      console.log(f);
+
+      let text1 = "sridhar";
+      let text2 = "kuruva";
+      console.log(text1 + text2);
+
+      let text3 = "virat";
+      text3 += "kohli";
+      console.log(text3);
+
+      let g = 3;
+      g += 4;
+      console.log(g);
+
+      g -= 1;
+      console.log(g);
+
+      g *= 6;
+      console.log(g);
+
+      g /= 2;
+      console.log(g);
+
+      g %= 5;
+      console.log(g);
+
+      let h = 8;
+      console.log(h == 7);
+
+      console.log(h == 8);
+
+      console.log(h === 8);
+
+      console.log(h === "8");
+
+      console.log(h != 8);
+
+      console.log(h !== 8);
+
+      console.log(h!=="8");
+
+      console.log(h>=8);
+
+      console.log(h<=8);
+
+      console.log(h<10);
+
+      console.log(h>10);
+    </script>
+
+    <h2>Javascript condition</h2>
+    <p>type your age and click button</p>
+
+    <input id="age" value="18">
+    <button onclick="myvote()">VOTE</button>
+    <p id="demo"></p>
+
+    <script>
+        function myvote(){
+            let vote;
+            let age=Number(document.getElementById("age").value);
+            if (isNaN(age)){
+                vote="Input is not a number"
+            }
+            else{
+                vote=(age <18)?"Too young" :" age is enough";
+
+            }
+             document.getElementById("demo").innerHTML = vote + " to vote";
+        }
+    </script>
+  </body>
+</html>
