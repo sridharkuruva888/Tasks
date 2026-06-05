@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Marks Calculator</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    padding:20px;
+}
+
+.container{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+    width:100%;
+    max-width:500px;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    color:#fff;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+}
+
+input:focus{
+    box-shadow:0 0 8px rgba(255,255,255,0.8);
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:8px;
+    background:#ffffff;
+    color:#2575fc;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    background:#f2f2f2;
+}
+
+.result{
+    margin-top:20px;
+    background:rgba(255,255,255,0.2);
+    padding:15px;
+    border-radius:10px;
+    color:#fff;
+}
+
+.result p{
+    margin:10px 0;
+    font-size:18px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Student Marks Calculator</h2>
+
+    <input type="text" id="studentName" placeholder="Enter Student Name">
+
+    <input type="number" id="sub1" placeholder="Telugu" min="0" max="100">
+    <input type="number" id="sub2" placeholder="English" min="0" max="100">
+    <input type="number" id="sub3" placeholder="Hindi" min="0" max="100">
+    <input type="number" id="sub4" placeholder="Maths" min="0" max="100">
+    <input type="number" id="sub5" placeholder="Science" min="0" max="100">
+    <input type="number" id="sub6" placeholder="Social" min="0" max="100">
+
+    <button onclick="calculateResult()">Calculate Result</button>
+
+    <div class="result" id="result">
+        <p><strong>Student Name:</strong> -</p>
+        <p><strong>Total Marks:</strong> 0 / 600</p>
+        <p><strong>Percentage:</strong> 0%</p>
+        <p><strong>Grade:</strong> -</p>
+        <p><strong>Result:</strong> -</p>
+    </div>
+
+</div>
+
+<script>
+function calculateResult(){
+
+    let studentName = document.getElementById("studentName").value.trim();
+
+    if(studentName === ""){
+        alert("Please enter Student Name");
+        return;
+    }
+
+    let s1 = Number(document.getElementById("sub1").value);
+    let s2 = Number(document.getElementById("sub2").value);
+    let s3 = Number(document.getElementById("sub3").value);
+    let s4 = Number(document.getElementById("sub4").value);
+    let s5 = Number(document.getElementById("sub5").value);
+    let s6 = Number(document.getElementById("sub6").value);
+
+    let total = s1 + s2 + s3 + s4 + s5 + s6;
+    let Percentage = (total / 600) * 100;
+
+    let grade;
+    let status;
+
+
+    if(s1 < 35 || s2 < 35 || s3 < 35 || s4 < 35 || s5 < 35 || s6 < 35){
+        grade = "Fail";
+        status = "Failed in One or More Subjects";
+    }
+    else if(Percentage >= 90){
+        grade = "A+";
+        status = "Pass";
+    }
+    else if(Percentage >= 80){
+        grade = "A";
+        status = "Pass";
+    }
+    else if(Percentage >= 70){
+        grade = "B";
+        status = "Pass";
+    }
+    else if(Percentage >= 60){
+        grade = "C";
+        status = "Pass";
+    }
+    else if(Percentage >= 50){
+        grade = "D";
+        status = "Pass";
+    }
+    else{
+        grade = "Fail";
+        status = "Fail";
+    }
+
+    document.getElementById("result").innerHTML = `
+        <p><strong>Student Name:</strong> ${studentName}</p>
+        <p><strong>Total Marks:</strong> ${total} / 600</p>
+        <p><strong>Percentage:</strong> ${Percentage.toFixed(2)}%</p>
+        <p><strong>Grade:</strong> ${grade}</p>
+        <p><strong>Result:</strong> ${status}</p>
+    `;
+}
+</script>
+
+</body>
+</html>
