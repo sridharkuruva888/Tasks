@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let signal = "yellow";
+
+      if (signal === "red") {
+        console.log("Stop immediately");
+      } else if (signal === "yellow") {
+        console.log("Slow down and prepare to stop");
+      } else if (signal === "green") {
+        console.log("Go safely");
+      } else {
+        console.log("Invalid Signal Color");
+      }
+    </script>
+
+    <script>
+      let month = 10;
+
+      switch (month) {
+        case 1:
+          console.log("January");
+          break;
+        case 2:
+          console.log("February");
+          break;
+        case 3:
+          console.log("March");
+          break;
+        case 4:
+          console.log("April");
+          break;
+        case 5:
+          console.log("May");
+          break;
+        case 6:
+          console.log("June");
+          break;
+        case 7:
+          console.log("July");
+          break;
+        case 8:
+          console.log("August");
+          break;
+        case 9:
+          console.log("September");
+          break;
+        case 10:
+          console.log("October");
+          break;
+        case 11:
+          console.log("November");
+          break;
+        case 12:
+          console.log("December");
+          break;
+        default:
+          console.log("Invalid month number");
+      }
+    </script>
+
+    <script>
+      let month1 = "march";
+
+      switch (month1) {
+        case "march":
+        case "april":
+        case "may":
+        case "june":
+          console.log("Summer Season");
+          break;
+
+        case "july":
+        case "august":
+        case "september":
+        case "october":
+          console.log("Rainy Season");
+          break;
+
+        case "november":
+        case "december":
+        case "january":
+        case "february":
+          console.log("Winter Season");
+          break;
+
+        default:
+          console.log("Invalid Month Name");
+      }
+    </script>
+
+    <script>
+      let age = 20;
+      let hasID = true;
+      let hasTicket = false;
+
+      if (age >= 18 && hasID && hasTicket) {
+        console.log("Entry Allowed");
+      } else if (age < 18) {
+        console.log("Entry Denied: Under Age");
+      } else if (age >= 18 && !hasID) {
+        console.log("Entry Denied: ID Required");
+      } else if (age >= 18 && hasID && !hasTicket) {
+        console.log("Entry Denied: Ticket Required");
+      } else {
+        console.log("Invalid Details");
+      }
+    </script>
+
+    <script>
+      let age1 = 18;
+      let hasID1 = false;
+      let hasTicket1 = true;
+
+      if (age1 >= 18 || hasID1 || hasTicket1) {
+        console.log("Entry Allowed");
+      } else if (age1 < 18 || !hasID1 || !hasTicket1) {
+        console.log("Some Requirements Are Missing");
+      } else {
+        console.log("Entry Denied");
+      }
+    </script>
+
+    <script>
+      let age2 = 20;
+      let hasID2 = true;
+      let hasTicket2 = false;
+
+      if ((age2 >= 18 && hasID2) || hasTicket2) {
+        console.log("Entry Allowed");
+      } else if (age2 < 18 && !hasTicket2) {
+        console.log("Entry Denied: Under Age and No Ticket");
+      } else if (!hasID2 && !hasTicket2) {
+        console.log("Entry Denied: ID or Ticket Required");
+      } else {
+        console.log("Invalid Details");
+      }
+    </script>
+
+    <script>
+      let isWeekend = true;
+      let isHoliday = true;
+      let hasLeaveApproved = false;
+
+      if (isWeekend && isHoliday && hasLeaveApproved) {
+        console.log("You can take a trip");
+      } else if (!isWeekend) {
+        console.log("It is not a weekend");
+      } else if (!isHoliday) {
+        console.log("It is not a holiday");
+      } else if (!hasLeaveApproved) {
+        console.log("Leave is not approved");
+      } else {
+        console.log("Invalid Details");
+      }
+    </script>
+
+    <script>
+      let isWeekend1 = false;
+      let isHoliday1 = false;
+      let hasLeaveApproved1 = true;
+
+      if (isWeekend1 || isHoliday1 || hasLeaveApproved1) {
+        console.log("You can take a trip");
+      } else if (!isWeekend1 || !isHoliday1 || !hasLeaveApproved1) {
+        console.log("At least one condition is missing");
+      } else {
+        console.log("Invalid Details");
+      }
+    </script>
+
+    <script>
+      let isWeekend2 = true;
+      let isHoliday2 = false;
+      let hasLeaveApproved2 = true;
+
+      if (hasLeaveApproved2 && (isWeekend2 || isHoliday2)) {
+        console.log("You can take a trip");
+      } else if (!hasLeaveApproved2) {
+        console.log("Leave is not approved");
+      } else if (!isWeekend2 && !isHoliday2) {
+        console.log("Neither weekend nor holiday");
+      } else {
+        console.log("Invalid Details");
+      }
+    </script>
+  </body>
+</html>
