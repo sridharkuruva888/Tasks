@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <script>
+      //slice()
+      let A="Sridhar is an great cricket player";
+
+      console.log(A.slice(0,7));
+
+      let B="Virat is an agressive player";
+
+      let c=B.slice(12,28);
+      console.log(c);
+
+      //substring()
+      let D="sridhar is an good boy";
+      console.log(D.substring(8,11));
+
+      let F="sridhar is an bad boy";
+      console.log(F.substring(0,7));
+
+      //substr()
+
+      let E="sridhar is an good boy";
+      console.log(E.substr(8,11));
+
+      let G="sridhar is an good boy";
+        console.log(G.substr(11,19));
+
+    //replace()
+    let H="sridhar,virat";
+    console.log(H.replace("virat","kohli"));
+
+    let I="sridhar,good,sridhar";
+    console.log(I.replace("sridhar","bad"));
+
+    //replaceAll()
+    let J="sridhar,virat,sridhar";
+    console.log(J.replaceAll("sridhar","kohli"));
+
+    let K="dhoni,mahendra,singh,dhoni";
+    console.log(K.replaceAll("dhoni","kohli"));
+
+    // toUpperCase()
+    let L="sridhar";
+    console.log(L.toUpperCase());
+     let M="virat kohli";
+    console.log(M.toUpperCase());
+
+    //toLowerCase()
+    let N="SRIDHAR";
+    console.log(N.toLowerCase());
+     let O="KOHLI";
+    console.log(O.toLowerCase());
+
+    // concat()
+    let P="sridhar";
+    let Q=" is an good boy";
+    console.log(P.concat(Q))
+
+    let R="virat";
+    let S=" kohli";
+    console.log(R.concat(S));
+
+
+    //trim() 
+    let T="    Virat is an agressive player    ";
+    console.log(T.trim());
+    
+    let U="    sridhar is an bad boy   "
+    console.log(U.trim());
+
+    //trimStart()
+    let V="    dhoni is an test player   ";
+    console.log(V.trimStart());
+
+    let W="    Virat is an test player";
+    console.log(W.trimStart());
+
+    //trimEnd()
+    let X="    Virat is an agressive player    ";
+    console.log(X.trimEnd());
+
+    let Y="    sridhar is an bad boy   ";
+    console.log(Y.trimEnd());
+
+
+    //charAt()
+    let Z="sridhar";
+    console.log(Z.charAt(4));
+
+    let Z1="sridhar";
+    console.log(Z1.charAt(6));
+
+    //charCodeAt() 
+    let a="sridhar";
+    console.log(a.charCodeAt(0));
+
+    let b="virat kohli";
+    console.log(b.charCodeAt(6));
+
+    // split()
+    let C=" Virat-is-an-agressive-player ";
+    console.log(C.split('-'));
+
+    let d="Dhoni0is0an0test0player";
+    console.log(d.split('0'));
+
+    // indexOf()
+    let e="sridhar is an good boy";
+    console.log(e.indexOf("good"));
+
+    let f="dhoni is an test player";
+    console.log(f.indexOf("test"));
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <script>
+      const movies = [
+        { id: 1, title: "Devara", rating: 9 },
+        { id: 2, title: "Dragon", rating: 10 },
+        { id: 3, title: "RRR", rating: 9 },
+        { id: 4, title: "Temper", rating: 7 },
+      ];
+
+      // 1. Create a new array containing only movie titles.
+
+      const title = movies.map((movie) => movie.title);
+      console.log(title);
+
+      //2. Create a new array containing only movie ratings.
+
+      let rating = movies.map((rating) => rating.rating);
+      console.log(rating);
+
+      //3. Increase every movie rating by 1.
+
+      const increasedRatings = movies.map((movie) => movie.rating + 1);
+      console.log(increasedRatings);
+
+      //4. Get all movies with rating greater than 8.
+
+      const review8 = movies.filter((movie) => movie.rating > 8);
+      console.log(review8);
+
+      //5. Get all movies with rating less than 9.
+
+      const review9 = movies.filter((movie) => movie.rating > 9);
+      console.log(review9);
+
+      //6. Find the movie with ID 3.
+
+      const findmovie = movies.find((movie) => movie.id === 3);
+      console.log(findmovie);
+
+      //7. Find the movie with title “Dragon”.
+
+      const findTitle = movies.find((movie) => movie.title === "Dragon");
+      console.log(findTitle);
+
+      //8.  Calculate the total of all movie ratings.
+      const totalRatings = movies.reduce(
+        (total, movie) => total + movie.rating,
+        0,
+      );
+      console.log("Total Ratings:", totalRatings);
+
+      const products = [
+        { id: 1, name: "Laptop", price: 50000 },
+        { id: 2, name: "Mouse", price: 500 },
+        { id: 3, name: "Keyboard", price: 1500 },
+        { id: 4, name: "Monitor", price: 12000 },
+      ];
+
+      //9. Create an array containing only product names.
+      const names = products.map((product) => product.name);
+      console.log(names);
+
+      //10. Create an array containing only product prices.
+      const prices = products.map((product) => product.price);
+      console.log(prices);
+
+      //11. Increase every product price by ₹1000.
+      const prodPrice = products.map((product) => product.price + 1000);
+      console.log(prodPrice);
+
+      //12. Get all products costing more than ₹1000.
+      const prodCost = products.filter((product) => product.price > 1000);
+      console.log(prodCost);
+
+      //13. Get all products costing less than ₹10000.
+      const productCost = products.filter((product) => product.price > 10000);
+      console.log(productCost);
+
+      //14. Find the product with ID 2.
+      const findId = products.find((product) => product.id === 2);
+      console.log(findId);
+
+      //15. Find the product named “Monitor”.
+      const findMonitor = products.find(
+        (product) => product.name === "Monitor",
+      );
+      console.log(findMonitor);
+
+      //16. Calculate the total cost of all products.
+      const totalPrice = products.reduce(
+        (total, product) => total + product.price,
+        0,
+      );
+      console.log(totalPrice);
+
+      const scores = [45, 80, 20, 100, 60];
+
+      //17. Add 10 runs to every score.
+      const add10 = scores.map((score) => score + 10);
+      console.log(add10);
+
+      //18. Add 5 runs to every score.
+      const add5 = scores.map((score) => score + 5);
+      console.log(add5);
+
+      //19. Get all scores greater than 50.
+      const great50 = scores.filter((score) => score > 50);
+      console.log(great50);
+
+      //20. Get all scores greater than or equal to 80.
+      const great80 = scores.filter((score) => score >= 80);
+      console.log(great80);
+
+      //Find the first score greater than 70.
+      const great70 = scores.find((score) => score > 70);
+      console.log(great70);
+
+      // Find the first score equal to 100.
+      const equal100 = scores.find((score) => score === 100);
+      console.log(equal100);
+
+      //23. Calculate the total runs scored.
+      const totalRuns = scores.reduce((total, score) => total + score, 0);
+      console.log(totalRuns);
+
+      //24. Calculate the average score.
+
+      const total = scores.reduce((sum, score) => sum + score, 0);
+      const average = total / scores.length;
+
+      console.log("Average Score:", average);
+
+      const students = [
+        { name: "Ravi", marks: 90 },
+        { name: "Priya", marks: 75 },
+        { name: "Rahul", marks: 40 },
+        { name: "Anu", marks: 95 },
+      ];
+
+      // 25. Create an array containing only student names.
+      const studentNames = students.map((student) => student.name);
+      console.log(studentNames);
+
+      // 26. Create an array containing only student marks.
+      const studentMarks = students.map((student) => student.marks);
+      console.log(studentMarks);
+
+      // 27. Add 5 marks to every student.
+      const updatedMarks = students.map((student) => student.marks + 5);
+      console.log(updatedMarks);
+
+      // 28. Get students who scored above 80.
+      const above80 = students.filter((student) => student.marks > 80);
+      console.log(above80);
+
+      // 29. Get students who scored below 50.
+      const below50 = students.filter((student) => student.marks < 50);
+      console.log(below50);
+
+      // 30. Find the student named "Rahul".
+      const rahul = students.find((student) => student.name === "Rahul");
+      console.log(rahul);
+
+      // 31. Find the first student who scored above 90.
+      const above90 = students.find((student) => student.marks > 90);
+      console.log(above90);
+
+      // 32. Calculate the total marks of all students.
+      const totalMarks = students.reduce(
+        (sum, student) => sum + student.marks,
+        0,
+      );
+      console.log(totalMarks);
+
+      const foodOrders = [
+        { item: "Pizza", price: 300 },
+        { item: "Burger", price: 150 },
+        { item: "Biryani", price: 250 },
+        { item: "Ice Cream", price: 100 },
+      ];
+
+      // 33. Create an array containing only food item names.
+      const foodNames = foodOrders.map((food) => food.item);
+      console.log(foodNames);
+
+      // 34. Create an array containing only food prices.
+      const foodPrices = foodOrders.map((food) => food.price);
+      console.log(foodPrices);
+
+      // 35. Increase every food price by ₹50.
+      const updatedPrices = foodOrders.map((food) => food.price + 50);
+      console.log(updatedPrices);
+
+      // 36. Get all food items costing more than ₹200.
+      const above200 = foodOrders.filter((food) => food.price > 200);
+      console.log(above200);
+
+      // 37. Get all food items costing less than ₹250.
+      const below250 = foodOrders.filter((food) => food.price < 250);
+      console.log(below250);
+
+      // 38. Find the food item "Biryani".
+      const biryani = foodOrders.find((food) => food.item === "Biryani");
+      console.log(biryani);
+
+      // 39. Find the first food item costing more than ₹250.
+      const firstAbove250 = foodOrders.find((food) => food.price > 250);
+      console.log(firstAbove250);
+
+      // 40. Calculate the total food bill.
+      const totalBill = foodOrders.reduce((sum, food) => sum + food.price, 0);
+      console.log(totalBill);
+
+      // Create an array of movie titles in uppercase
+      const upperCaseTitles = movies.map((movie) => movie.title.toUpperCase());
+
+      console.log(upperCaseTitles);
+
+      // Create an array of product names in lowercase
+      const lowerCaseNames = products.map((product) =>
+        product.name.toLowerCase(),
+      );
+
+      console.log(lowerCaseNames);
+
+      // Get all students whose names start with "R"
+      const studentsWithR = students.filter((student) =>
+        student.name.startsWith("R"),
+      );
+
+      console.log(studentsWithR);
+
+      // Get all movies whose title length is greater than 5
+      const longTitleMovies = movies.filter((movie) => movie.title.length > 5);
+
+      console.log(longTitleMovies);
+
+      //  Calculate the combined total of all cricket scores and all student marks.
+      const combinedTotal = total + totalMarks;
+
+      console.log(combinedTotal);
+
+      // Find the most expensive product
+      const mostExpensive = products.reduce((max, product) =>
+        product.price > max.price ? product : max,
+      );
+
+      console.log(mostExpensive);
+      // Find the highest cricket score.
+      const highestScore = scores.reduce((max, score) =>
+        score > max ? score : max,
+      );
+
+      console.log(highestScore);
+
+      // Find the student with the highest marks
+      const topper = students.reduce((max, student) =>
+        student.marks > max.marks ? student : max,
+      );
+
+      console.log(topper);
+
+      // Find the movie with the highest rating
+      const highestRatedMovie = movies.reduce((max, movie) =>
+        movie.rating > max.rating ? movie : max,
+      );
+
+      console.log(highestRatedMovie);
+
+      const players = [
+        { id: 1, name: "Virat", score: 85 },
+        { id: 2, name: "Rohit", score: 120 },
+        { id: 3, name: "Gill", score: 95 },
+        { id: 4, name: "Hardik", score: 70 },
+      ];
+      //Create an array containing only player names
+      const playerNames = players.map((player) => player.name);
+      console.log(playerNames);
+
+      //Add 10 runs to every player's score
+      const updatedPlayers = players.map((player) => player.score + 10);
+      console.log(updatedPlayers);
+
+      //Get players who scored more than 90 runs
+      const topPlayers = players.filter((player) => player.score > 90);
+      console.log(topPlayers);
+
+      //Find the player named "Gill"
+      const gill = players.find((player) => player.name === "Gill");
+      console.log(gill);
+
+      //Calculate the total score of all players
+      const totalScore = players.reduce((sum, player) => sum + player.score, 0);
+      console.log(totalScore);
+    </script>
+  </body>
+</html>
