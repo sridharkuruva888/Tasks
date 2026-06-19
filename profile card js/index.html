@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Follow Button</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #e6e9f0, #eef1f5);
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            background: white;
+            width: 300px;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .card h2 {
+            margin: 15px 0 5px;
+        }
+
+        .card p {
+            color: gray;
+            margin-bottom: 20px;
+        }
+
+        .follow-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            color: white;
+            background: linear-gradient(to right, #1e90ff, #007bff);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <img src="assets/WhatsApp Image 2026-06-19 at 12.20.36 PM.jpeg">
+    <h2>Sridhar Kuruva</h2>
+    <p>@sridhar_kuruva</p>
+    <button class="follow-btn" onclick="toggleFollow()">Follow</button>
+</div>
+
+<script>
+    let isFollowing = false;
+
+    function toggleFollow() {
+        let button = document.querySelector(".follow-btn");
+
+        if (isFollowing === false) {
+            button.innerHTML = "Following";
+            button.style.background = "linear-gradient(to right, #28a745, #218838)";
+            isFollowing = true;
+        } else {
+            button.innerHTML = "Follow";
+            button.style.background = "linear-gradient(to right, #1e90ff, #007bff)";
+            isFollowing = false;
+        }
+    }
+</script>
+
+</body>
+</html>
