@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Pizza Order Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Left Section -->
+        <div class="builder">
+
+            <h1>🍕 BUILD YOUR SMART PIZZA</h1>
+
+            <!-- Crust -->
+            <div class="section">
+                <h2>CRUST</h2>
+
+                <select id="size">
+                    <option value="thin">🍕 Thin ($8.00)</option>
+                    <option value="regular">🍕 Regular ($10.00)</option>
+                    <option value="stuffed">🍕 Stuffed ($12.00)</option>
+                </select>
+            </div>
+
+            <!-- Length -->
+            <div class="section">
+                <h2>SIZE</h2>
+
+                <div class="length-buttons">
+                    <button class="length-btn" data-length="small">
+                        Small
+                    </button>
+
+                    <button class="length-btn active" data-length="medium">
+                        Medium
+                    </button>
+
+                    <button class="length-btn" data-length="large">
+                        Large
+                    </button>
+                </div>
+            </div>
+
+            <!-- Toppings -->
+            <div class="section">
+                <h2>TOPPINGS</h2>
+
+                <div class="toppings">
+
+                    <label>
+                        <input type="checkbox" value="cheese">
+                        🧀 Cheese
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="mushrooms">
+                        🍄 Mushrooms
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="pepperoni">
+                        🍕 Pepperoni
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="onions">
+                        🧅 Onions
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="peppers">
+                        🫑 Peppers
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="sausage">
+                        🌭 Sausage
+                    </label>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Receipt -->
+        <div class="receipt-section">
+
+            <h1>🧾 YOUR RECEIPT</h1>
+
+            <div class="receipt">
+
+                <h2 id="pizzaTitle">
+                    MEDIUM THIN CRUST PIZZA
+                </h2>
+
+                <hr>
+
+                <div class="row">
+                    <span>Base:</span>
+                    <span id="basePrice">$12.00</span>
+                </div>
+
+                <div class="row">
+                    <span>Toppings:</span>
+                    <span id="toppingsPrice">$0.00</span>
+                </div>
+
+                <div class="row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$12.00</span>
+                </div>
+
+                <div class="row">
+                    <span>Discount:</span>
+                    <span>10% (SAVE10)</span>
+                </div>
+
+                <hr>
+
+                <div class="final-total">
+                    <div>
+                        <h3>FINAL</h3>
+                        <h3>TOTAL</h3>
+                    </div>
+
+                    <h1 id="totalPrice">$10.80</h1>
+                </div>
+
+            </div>
+
+            <button id="orderBtn">
+                PLACE ORDER
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>

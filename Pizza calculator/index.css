@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:#f6ecd8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:90%;
+    display:flex;
+    justify-content:space-between;
+    gap:80px;
+}
+
+.builder,
+.receipt-section{
+    width:45%;
+}
+
+h1{
+    margin-bottom:30px;
+}
+
+.section{
+    margin-bottom:30px;
+}
+
+.section h2{
+    margin-bottom:10px;
+}
+
+select{
+    width:100%;
+    padding:12px;
+    font-size:20px;
+    border-radius:8px;
+}
+
+.length-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.length-btn{
+    flex:1;
+    padding:12px;
+    border:2px solid #333;
+    background:#fff;
+    cursor:pointer;
+    border-radius:8px;
+    font-size:18px;
+}
+
+.active{
+    background:#e76f51;
+    color:#fff;
+}
+
+.toppings{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.toppings label{
+    font-size:20px;
+}
+
+.receipt{
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    margin:20px 0;
+    font-size:22px;
+}
+
+.final-total{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:25px;
+}
+
+.final-total h1{
+    font-size:50px;
+}
+
+#orderBtn{
+    width:100%;
+    margin-top:25px;
+    padding:15px;
+    background:#43a047;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:22px;
+    cursor:pointer;
+}
