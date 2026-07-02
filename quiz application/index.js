@@ -113,7 +113,6 @@ const quizData = [
 let currentQuestion = 0;
 let userAnswers = new Array(quizData.length).fill(null);
 
-// DOM Elements
 const welcomeScreen = document.getElementById("welcome-screen");
 const quizScreen = document.getElementById("quiz-screen");
 const resultScreen = document.getElementById("result-screen");
@@ -128,14 +127,14 @@ const questionEl = document.getElementById("question");
 const optionsContainer = document.getElementById("options-container");
 const progressEl = document.getElementById("progress");
 
-// Start Quiz
+
 startBtn.addEventListener("click", () => {
   welcomeScreen.classList.remove("active");
   quizScreen.classList.add("active");
   loadQuestion();
 });
 
-// Load Question
+
 function loadQuestion() {
 
   const current = quizData[currentQuestion];
@@ -181,7 +180,7 @@ function loadQuestion() {
   }
 }
 
-// Next
+
 nextBtn.addEventListener("click", () => {
   if (currentQuestion < quizData.length - 1) {
     currentQuestion++;
@@ -189,7 +188,7 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-// Previous
+
 prevBtn.addEventListener("click", () => {
   if (currentQuestion > 0) {
     currentQuestion--;
@@ -197,7 +196,7 @@ prevBtn.addEventListener("click", () => {
   }
 });
 
-// Submit Quiz
+
 submitBtn.addEventListener("click", showResults);
 
 function showResults() {
@@ -243,7 +242,7 @@ function showResults() {
   resultScreen.classList.add("active");
 }
 
-// Restart Quiz
+
 restartBtn.addEventListener("click", () => {
 
   currentQuestion = 0;

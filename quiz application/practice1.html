@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+   <div>
+    <h1 id="heading">Sridhar Kuruva</h1>
+    <button onclick="changeHeading()">change bg color</button>
+   </div>
+       
+<script>
+    function changeHeading(){
+        const color=["red","blue","purple","lightblue","black"];
+        const randomColor=color[Math.floor(Math.random() * color.length)];
+        //  document.getElementById("heading").style.backgroundColor=randomColor;
+         document.documentElement.style.backgroundColor=randomColor;
+    }
+   
+</script>
+    
+</body>
+</html>
