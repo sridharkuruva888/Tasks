@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .progress-container {
+        width: 400px;
+        height: 35px;
+        background: #ddd;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        width: 10%;
+        height: 100%;
+        background: royalblue;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        transition: width 0.5s ease;
+      }
+
+      button1 {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!---first task-->
+    <h3>try it out</h3>
+    <input type="text" id="nameInput" />
+    <button onclick="Wish()">Run</button>
+    <div id="output"></div>
+
+    <script>
+      function greetUser(name) {
+        if (!name) return "please enter the name";
+        return "  Hello  " + name + "🌟";
+      }
+
+      function Wish() {
+        const input = document.getElementById("nameInput").value;
+        const result = greetUser(input);
+        document.getElementById("output").innerText = result;
+      }
+    </script>
+
+    <!---Seond task-->
+
+    <h2>try it guys</h2>
+    <input type="number" id="num1" />
+    <select id="function1">
+      <option value="add">+</option>
+      <option value="subtraction">-</option>
+      <option value="multiply">*</option>
+    </select>
+    <input type="number" id="num2" />
+    <button onclick="runCalculate()">Calculate</button>
+    <div id="output1"></div>
+
+    <script>
+      function calculate(num1, num2, function1) {
+        if (function1 === "add") return num1 + num2;
+        if (function1 === "subtraction") return num1 - num2;
+        if (function1 === "multiply") return num1 * num2;
+        return 0;
+      }
+      function runCalculate() {
+        const sri1 = Number(document.getElementById("num1").value);
+        const sri2 = Number(document.getElementById("num2").value);
+        const sri3 = document.getElementById("function1").value;
+        const result = calculate(sri1, sri2, sri3);
+        document.getElementById("output1").innerText = "   Result  " + result;
+      }
+    </script>
+
+    <!--PROGRESS BAR TASK-->
+
+    <h3>just try</h3>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar">
+        <span id="progressText">10%</span>
+      </div>
+    </div>
+
+    <br />
+
+    <button1 onclick="setProgress(10)">10%</button1>
+    <button1 onclick="setProgress(25)">25%</button1>
+    <button1 onclick="setProgress(50)">50%</button1>
+    <button1 onclick="setProgress(70)">70%</button1>
+    <button1 onclick="setProgress(100)">100%</button1>
+
+    <script>
+      function setProgress(value) {
+        let progressBar = document.getElementById("progressBar");
+        let progressText = document.getElementById("progressText");
+
+        progressBar.style.width = value + "%";
+        progressText.innerText = value + "%";
+      }
+    </script>
+    <br />
+    <br />
+    <br />
+
+    <!--fourth task-->
+
+    <input type="text" id="name" placeholder="Enter your name" />
+    <button onclick="getGreeting()">Get Greeting</button>
+
+    <p id="result"></p>
+
+    <script>
+      function getGreeting() {
+        let name = document.getElementById("name").value.trim();
+        let result = document.getElementById("result");
+
+        let hour = new Date().getHours();
+        let greeting = "";
+
+        if (hour >= 5 && hour < 12) {
+          greeting = "Good Morning";
+        } else if (hour >= 12 && hour < 17) {
+          greeting = "Good Afternoon";
+        } else if (hour >= 17 && hour < 21) {
+          greeting = "Good Evening";
+        } else {
+          greeting = "Good Night";
+        }
+
+        if (name === "") {
+          result.innerHTML = "Please enter your name!";
+        } else {
+          result.innerHTML = greeting + " , " + name + "!";
+        }
+      }
+    </script>
+    <br />
+
+    <!--Disce task-->
+
+    <div id="sri4" style="padding-left: 75px">__</div>
+    <br />
+    <button onclick="Dice(6)">Roll 6</button>
+    <button onclick="Dice(12)">Roll 12</button>
+    <button onclick="Dice(1000)">Roll 1000</button>
+
+    <script>
+      function rollDice(sides = 6) {
+        return Math.floor(Math.random() * sides) + 1;
+      }
+
+      function Dice(sides) {
+        const result = rollDice(sides);
+        document.getElementById("sri4").innerText = result;
+      }
+    </script>
+    <br>
+    <br>
+      <!--task-->
+      <h3>try</h3>
+    <input type="text" id="sri5" />
+    <input type="number" id="sri6" />
+    <button onclick="Sridhar()">cut</button>
+    <div id="sri7"></div>
+
+    <script>
+      function truncate(text, limit) {
+        if (text.length <= limit) return text;
+        return text.substring(0, limit) + "...";
+      }
+
+      function Sridhar() {
+        const text = document.getElementById("sri5").value;
+        const limit = Number(document.getElementById("sri6").value);
+        document.getElementById("sri7").innerText = truncate(text, limit);
+      }
+    </script>
+  </body>
+</html>
