@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Search</title>
+
+    <link href="https://cdn.maptiler.com/maptiler-sdk-js/latest/maptiler-sdk.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Search Place on Map</h2>
+
+    <input
+        type="text"
+        id="place"
+        placeholder="Enter Place Name">
+
+    <button onclick="searchPlace()">
+        Search
+    </button>
+
+</div>
+
+<div id="map"></div>
+
+<script src="https://cdn.maptiler.com/maptiler-sdk-js/latest/maptiler-sdk.umd.min.js"></script>
+
+<script src="index.js"></script>
+
+</body>
+</html>
